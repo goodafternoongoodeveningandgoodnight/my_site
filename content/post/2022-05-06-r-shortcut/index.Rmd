@@ -1,0 +1,25 @@
+---
+title: Shortcuts in R studio
+author: Sikai Huang
+date: '2022-05-06'
+slug: r-shortcut
+categories:
+  - R
+tags:
+  - RStudio
+---
+
+R shortcuts aim to make the programming life easier. It is available directly in the **Navigation Bar - Tools- Keyboard shortcuts help**. I listed commonly used shortcuts that might help **R beginners (students)** like me:
+
+
+- **_New R script_** : Ctrl + Shift + N - Cmd + Shift + N
+- **_Run selected line_** : Ctrl + Shift + ↵ - Cmd + Shift + ↵
+- **_Undo_** : Ctrl + Z - Cmd + Z
+- **_Redo_** : Ctrl + Shift + Z  - Cmd + Shift + Z
+- **_Copy_** : Ctrl + C - Cmd + C
+- **_Paste_** : Ctrl + Y - Cmd + Y
+- **_Cut_** : Ctrl + X  - Cmd + X
+- **_%>% _** : Ctrl + Shit + M  - Cmd + Shift + M
+
+
+

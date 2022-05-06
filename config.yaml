@@ -1,6 +1,6 @@
-baseurl: "/"
+baseurl: "/https://rococo-bunny-f349c0.netlify.app/"
 languageCode: "en-us"
-title: "A minimal Hugo website"
+title: "Sikai Huang"
 theme: "hugo-xmin"
 googleAnalytics: ""
 disqusShortname: ""
@@ -19,18 +19,20 @@ menu:
     - name: About
       url: "about/"
       weight: 2
+    - name: Blogs
+      url:
+      weight: 3
     - name: Categories
       url: "categories/"
-      weight: 3
+      weight: 4
     - name: Tags
       url: "tags/"
-      weight: 4
-    - name: Subscribe
-      url: "index.xml"
+      weight: 5
+
 
 params:
   description: "A website built through Hugo and blogdown."
-  footer: "&copy; [Yihui Xie](https://yihui.org) 2017 -- {Year} | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+  footer: "&copy; [Sikai Huang](https://yihui.org) 2022 -- {Year} |[Linkdin](https://www.linkedin.com/in/sikai-huang-59864a233/) |[Github](https://github.com/goodafternoongoodeveningandgoodnight) | [Weibo](https://weibo.com/u/3211883205)"
 
 markup:
   highlight:
