@@ -6,7 +6,34 @@
     <description>Recent content in Home on A minimal Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hello</title>
+      <link>/post/2022/05/07/hello/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/07/hello/</guid>
+      <description>hello</description>
+    </item>
+    
+    <item>
+      <title>testt</title>
+      <link>/post/2022/05/07/testt/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/07/testt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>what is life</title>
+      <link>/post/2022/05/07/what-is-life/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/07/what-is-life/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Shortcuts in R studio</title>
       <link>/post/2022/05/06/r-shortcut/</link>
@@ -48,6 +75,15 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     </item>
     
     <item>
+      <title>About</title>
+      <link>/blog/</link>
+      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
+      
+      <guid>/blog/</guid>
+      <description>This is a &amp;ldquo;hello world&amp;rdquo; example website for the **blogdown**](https://github.com/rstudio/blogdown)) package. The theme was forked from @jrutheiser/hugo-lithium-theme](https://github.com/jrutheiser/hugo-lithium-theme)) and modified by Yihui Xie.](https://github.com/yihui/hugo-lithium).)</description>
+    </item>
+    
+    <item>
       <title>A Plain Markdown Post</title>
       <link>/post/2016/02/14/a-plain-markdown-post/</link>
       <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
@@ -59,22 +95,14 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     </item>
     
     <item>
-      <title>Lorem Ipsum</title>
-      <link>/post/2015/07/23/lorem-ipsum/</link>
-      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2015/07/23/lorem-ipsum/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Quisque mattis volutpat lorem vitae feugiat.</description>
-    </item>
-    
-    <item>
       <title>About me</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>XMin is the first Hugo theme I have designed. The original reason that I wrote it was I needed a minimal example of Hugo themes when I was writing the blogdown book. Basically I wanted a simple theme that supports a navigation menu, a home page, other single pages, lists of pages, blog posts, categories, tags, and RSS. That is all. Nothing fancy. In terms of CSS and JavaScript, I really want to keep them minimal.</description>
+      <description>config.yaml For this example site, I defined permalinks for two sections, post and note, so that the links to pages under these directories will contain the date info, e.g., https://xmin.yihui.org/post/2016/02/14/a-plain-markdown-post/. This is optional, and it is up to your personal taste of URLs.
+permalinks: note: &amp;quot;/note/:year/:month/:day/:slug/&amp;quot; post: &amp;quot;/post/:year/:month/:day/:slug/&amp;quot;  You can define the menu through menu.main, e.g.,
+menu: main: - name: Home url: &amp;quot;&amp;quot; weight: 1 - name: About url: &amp;quot;about/&amp;quot; weight: 2 - name: Categories url: &amp;quot;categories/&amp;quot; weight: 3 - name: Tags url: &amp;quot;tags/&amp;quot; weight: 4 - name: Subscribe url: &amp;quot;index.</description>
     </item>
     
   </channel>

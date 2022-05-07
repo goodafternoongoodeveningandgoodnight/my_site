@@ -6,7 +6,25 @@
     <description>Recent content in plot on A minimal Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/plot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hello</title>
+      <link>/post/2022/05/07/hello/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/07/hello/</guid>
+      <description>hello</description>
+    </item>
+    
+    <item>
+      <title>testt</title>
+      <link>/post/2022/05/07/testt/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/07/testt/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hello R Markdown</title>
       <link>/post/2020/12/01/hello-r-markdown/</link>

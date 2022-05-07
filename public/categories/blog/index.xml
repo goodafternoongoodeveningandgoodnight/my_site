@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on A minimal Hugo website</title>
+    <link>/categories/blog/</link>
+    <description>Recent content in Blog on A minimal Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hello</title>
+      <link>/post/2022/05/07/hello/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/07/hello/</guid>
+      <description>hello</description>
+    </item>
+    
+    <item>
+      <title>what is life</title>
+      <link>/post/2022/05/07/what-is-life/</link>
+      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/07/what-is-life/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

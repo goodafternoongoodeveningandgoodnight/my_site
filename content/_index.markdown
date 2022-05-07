@@ -4,7 +4,7 @@ title: Home
 <img src="/./_index_files/home_logo.png" style="max-width:15%;min-width:40px;float:right;" alt="Sikai" />
 
 # SIKAI HUANG
-## _A student, a student, and always a student_
+## _A student, a student, and a student_
 
 ```
 How you doing :)
