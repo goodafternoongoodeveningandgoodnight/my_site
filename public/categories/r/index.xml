@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on A minimal Hugo website</title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on A minimal Hugo website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shortcuts in R studio</title>
+      <link>/post/2022/05/06/r-shortcut/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/06/r-shortcut/</guid>
+      <description> R shortcuts make the programming life easier. They are available directly in the Navigation Bar - Tools- Keyboard shortcuts help. I listed commonly used shortcuts that might help R beginners (students) like me:
+   Windows &amp;amp; Linux Mac    Open Document Ctrl + O Cmd + O  New R Script Ctrl + Shift + N Cmd + Shift + N  Run Selected Line Ctrl + Shift + ↵ Cmd + Shift + ↵  Undo Ctrl + Z Cmd + Z  Redo Ctrl + Shift + Z Cmd + Shift + Z  Copy Ctrl + C Cmd + C  Paste Ctrl + Y Cmd + Y  Cut Ctrl + X Cmd + X  Move Lines Up/Down Alt+Up/Down Option+Up/Down  Run Selected Line Ctrl + Shift + ↵ Cmd + Shift + ↵  Delete Line Ctrl + D Cmd + D  Move to Line start Ctrl + Left Cmd + Left  Move to Line end Ctrl + Right Cmd + Right  Select to Line Start Ctrl + Shift + Left Cmd + + Shift + Left  Select to Line End Ctrl + Shift + Right Cmd + + Shift + Right  Insert Pipe Operator( %&amp;gt;% ) Ctrl + Shift + M Cmd + Shift + M  Find Ctrl + F Cmd + F    </description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/post/2020/12/01/hello-r-markdown/</link>
+      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
+      
+      <guid>/post/2020/12/01/hello-r-markdown/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+  </channel>
+</rss>
