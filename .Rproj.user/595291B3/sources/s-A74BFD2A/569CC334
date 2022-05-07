@@ -3,7 +3,7 @@
     "path": "~/Desktop/my_site/content/_index.Rmarkdown",
     "project_path": "content/_index.Rmarkdown",
     "type": "r_markdown",
-    "hash": "313997844",
+    "hash": "2966160459",
     "contents": "",
     "dirty": false,
     "created": 1651783333712.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "7,47",
-        "scrollLine": "0"
+        "cursorPosition": "6,47",
+        "scrollLine": "2"
     },
     "folds": "",
-    "lastKnownWriteTime": 1651876326,
+    "lastKnownWriteTime": 1651916427,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1651876326243,
+    "last_content_update": 1651916427882,
     "read_only": false,
     "read_only_alternatives": []
 }

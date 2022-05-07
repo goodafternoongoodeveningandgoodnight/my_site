@@ -1,6 +1,6 @@
 baseurl: "/"
 languageCode: "en-us"
-title: "Sikai Huang"
+title: "A minimal Hugo website"
 theme: "hugo-xmin"
 googleAnalytics: ""
 disqusShortname: ""

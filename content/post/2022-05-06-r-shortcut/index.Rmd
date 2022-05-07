@@ -9,17 +9,26 @@ tags:
   - RStudio
 ---
 
-R shortcuts aim to make the programming life easier. It is available directly in the **Navigation Bar - Tools- Keyboard shortcuts help**. I listed commonly used shortcuts that might help **R beginners (students)** like me:
+R shortcuts make the programming life easier. They are available directly in the **Navigation Bar - Tools- Keyboard shortcuts help**. I listed commonly used shortcuts that might help **R beginners (students)** like me:
 
-
-- **_New R script_** : Ctrl + Shift + N - Cmd + Shift + N
-- **_Run selected line_** : Ctrl + Shift + ↵ - Cmd + Shift + ↵
-- **_Undo_** : Ctrl + Z - Cmd + Z
-- **_Redo_** : Ctrl + Shift + Z  - Cmd + Shift + Z
-- **_Copy_** : Ctrl + C - Cmd + C
-- **_Paste_** : Ctrl + Y - Cmd + Y
-- **_Cut_** : Ctrl + X  - Cmd + X
-- **_%>% _** : Ctrl + Shit + M  - Cmd + Shift + M
-
+|                  |  Windows & Linux| Mac|
+|:-----------------|:----:|:---:|
+|Open Document        | Ctrl + O|   Cmd + O| 
+|New R Script         | Ctrl + Shift + N|   Cmd + Shift + N|
+|Run Selected Line   | Ctrl + Shift + ↵|   Cmd + Shift + ↵|  
+|Undo       | Ctrl + Z|   Cmd + Z|  
+|Redo         | Ctrl + Shift + Z|   Cmd + Shift + Z|  
+|Copy   | Ctrl + C|   Cmd + C|  
+|Paste       | Ctrl + Y|   Cmd + Y|  
+|Cut   | Ctrl + X|   Cmd + X|  
+|Move Lines Up/Down         | Alt+Up/Down|   Option+Up/Down|
+|Run Selected Line   | Ctrl + Shift + ↵|   Cmd + Shift + ↵|  
+|Delete Line       | Ctrl + D|   Cmd + D|
+|Move to Line start         | Ctrl + Left|   Cmd + Left|  
+|Move to Line end         | Ctrl + Right|   Cmd + Right|  
+|Select to Line Start        | Ctrl + Shift + Left|   Cmd + + Shift + Left|  
+|Select to Line End        | Ctrl + Shift + Right|   Cmd + + Shift + Right|
+|Insert Pipe Operator( %>% )   | Ctrl + Shift + M|   Cmd + Shift + M| 
+|Find   | Ctrl + F|   Cmd + F| 
 
 
