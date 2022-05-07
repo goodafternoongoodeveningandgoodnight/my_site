@@ -6,34 +6,7 @@
     <description>Recent content in Posts on A minimal Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>hello</title>
-      <link>/post/2022/05/07/hello/</link>
-      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2022/05/07/hello/</guid>
-      <description>hello</description>
-    </item>
-    
-    <item>
-      <title>testt</title>
-      <link>/post/2022/05/07/testt/</link>
-      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2022/05/07/testt/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>what is life</title>
-      <link>/post/2022/05/07/what-is-life/</link>
-      <pubDate>Sat, 07 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2022/05/07/what-is-life/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Shortcuts in R studio</title>
       <link>/post/2022/05/06/r-shortcut/</link>
@@ -41,6 +14,7 @@
       
       <guid>/post/2022/05/06/r-shortcut/</guid>
       <description> R shortcuts make the programming life easier. They are available directly in the Navigation Bar - Tools- Keyboard shortcuts help. I listed commonly used shortcuts that might help R beginners (students) like me:
+Table1: shortcuts make life easier
    Windows &amp;amp; Linux Mac    Open Document Ctrl + O Cmd + O  New R Script Ctrl + Shift + N Cmd + Shift + N  Run Selected Line Ctrl + Shift + ↵ Cmd + Shift + ↵  Undo Ctrl + Z Cmd + Z  Redo Ctrl + Shift + Z Cmd + Shift + Z  Copy Ctrl + C Cmd + C  Paste Ctrl + Y Cmd + Y  Cut Ctrl + X Cmd + X  Move Lines Up/Down Alt+Up/Down Option+Up/Down  Run Selected Line Ctrl + Shift + ↵ Cmd + Shift + ↵  Delete Line Ctrl + D Cmd + D  Move to Line start Ctrl + Left Cmd + Left  Move to Line end Ctrl + Right Cmd + Right  Select to Line Start Ctrl + Shift + Left Cmd + + Shift + Left  Select to Line End Ctrl + Shift + Right Cmd + + Shift + Right  Insert Pipe Operator( %&amp;gt;% ) Ctrl + Shift + M Cmd + Shift + M  Find Ctrl + F Cmd + F    </description>
     </item>
     
