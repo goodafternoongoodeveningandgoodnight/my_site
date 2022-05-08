@@ -6,6 +6,9 @@ title: Home
 # SIKAI HUANG
 ## _A student, a student, and a student_
 
+I'm an islander living on Pingtan Island. It's the Chinese fifth-largest island with a super beautiful natural environment. Pingtan is also the nearest place, only around 68 miles away from Taiwan. I'm a student studying Public Health and a big fan of quantitative study and computer science. However, before my postgraduate study, I was never exposed to quantitative research and computer science practice. I was struggling to pass my Visual Basic exam during my undergraduate. Sounds funny, doesn't it. I'm an advocator of minimalism-maximalism. Something looks simple but complicated to carry out by me. The website, compeletly built by R stuido you browsing here is an exmaple.
+
+
 <span style="font-family:楷体;"> 这是黄思凯的个人主页，是一位淳朴的[岛民](https://www.ptnet.cn/)。我最常用的家乡介绍是：那座四面环海，离台湾最近的岛，甚至用望远镜可以看到，现在它还以<span style="color:#33C0FF;">蓝眼泪</span>著称。”
 
 <span style="font-family:楷体;"> 我喜欢语文，不喜欢化学，热爱搞不懂的物理，上了数学的无数补习班，最后大学去了[中国药科大学](https://www.cpu.edu.cn)的国际医药商学院。疫情肆虐，选择了公共卫生的道路。来到[帝国理工学院](https://www.imperial.ac.uk/)，每天在进步，也在退步，好在期间发现了自己对定量研究的强烈兴趣，但常被诟病：毫无定量研究经历！所以，我需要做的还有很多，是个名副其实的**学生***。</span>
