@@ -3,7 +3,7 @@
     "path": "~/Desktop/my_site/content/post/2022-05-08-dplyr-package/index.Rmd",
     "project_path": "content/post/2022-05-08-dplyr-package/index.Rmd",
     "type": "r_markdown",
-    "hash": "1113904144",
+    "hash": "1569090314",
     "contents": "",
     "dirty": false,
     "created": 1652047604374.0,
@@ -12,15 +12,20 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "11,4",
-        "scrollLine": "0"
+        "cursorPosition": "14,0",
+        "scrollLine": "2",
+        "docOutlineVisible": "1",
+        "docOutlineSize": "151",
+        "rmdVisualMode": "false",
+        "rmdVisualWrapConfigured": "true",
+        "rmdVisualModeLocation": "178:0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1652091641,
+    "lastKnownWriteTime": 1652093692,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1652091641041,
+    "last_content_update": 1652093692348,
     "read_only": false,
     "read_only_alternatives": []
 }

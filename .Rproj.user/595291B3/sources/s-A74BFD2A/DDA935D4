@@ -3,7 +3,7 @@
     "path": "~/Desktop/my_site/content/post/2022-05-06-r-shortcut/index.Rmd",
     "project_path": "content/post/2022-05-06-r-shortcut/index.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2397683713",
     "contents": "",
     "dirty": false,
     "created": 1652047324838.0,
@@ -12,17 +12,17 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "16,0",
-        "scrollLine": "9",
-        "docOutlineVisible": "0",
+        "cursorPosition": "8,11",
+        "scrollLine": "0",
+        "docOutlineVisible": "1",
         "docOutlineSize": "21"
     },
     "folds": "",
-    "lastKnownWriteTime": 1652047354,
+    "lastKnownWriteTime": 1652093640,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1652047354134,
+    "last_content_update": 1652093640005,
     "read_only": false,
     "read_only_alternatives": []
 }

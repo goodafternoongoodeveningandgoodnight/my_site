@@ -6,27 +6,35 @@ categories:
   - R
 slug: dplyr-package
 output:
-  html_document:
-    toc: true
+  html_document: 
+    toc: yes
     toc_depth: 2
-    
+    highlight: monochrome
+    theme: cerulean
 ---
+
 # Introduction to dplyr
+
 ## Essential package
+
 ```{r message=FALSE, warning=FALSE}
 library(dplyr)
 library(gapminder) # a built-in dataset called "gapminder" in R studio
 ```
 
 ## Filter
+
 Extracting a subset from observations, only containing the row of chosen variables.
+
 ```{r, collapse=TRUE}
 gapminder %>%
   filter(year == 2002, country == "China") 
 ```
 
 ## Arrange
+
 Sortng observations in ascending or descending order of a particular variable.
+
 ```{r}
 # Sort in descending order of lifeExp
 gapminder %>%
@@ -34,8 +42,10 @@ gapminder %>%
 ```
 
 ## Mutate
+
 Using mutate to change(overwrite an existing one) or create a column
-```r
+
+```{r}
 # Use mutate to change the lifeExp
 gapminder %>%
   mutate(lifeExp = lifeExp * 12)
@@ -45,6 +55,7 @@ gapminder %>%
 ```
 
 ## Filter_Arrange_Mutate
+
 ```{r}
 # Filter, mutate, and arrange the gapminder dataset
 gapminder %>%
@@ -54,12 +65,14 @@ gapminder %>%
 ```
 
 # Grouping and Summarising
+
 ```{r message=FALSE, warning=FALSE}
 library(dplyr)
 library(gapminder)
 ```
 
 ## Summarising
+
 ```{r}
 gapminder %>%
   filter(year == 2007) %>%
@@ -68,6 +81,7 @@ gapminder %>%
 ```
 
 ## Grouping
+
 ```{r}
 gapminder %>%
   filter(year == 2007) %>%
@@ -77,6 +91,7 @@ gapminder %>%
 ```
 
 ## Visualizing medianGdpPercap within each continent within each year
+
 ```{r message=FALSE, warning=FALSE}
 by_year_continent <- gapminder %>%
   group_by(continent, year) %>%
@@ -92,13 +107,17 @@ ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent))
 ```
 
 # Data visualisation
+
 ## Essential package
+
 ```{r message=FALSE, warning=FALSE}
 library(dplyr)
 library(gapminder)
 library(ggplot2)
 ```
+
 ## Scatter plot
+
 ```{r}
 # Create gapminder_1952
 gapminder_1952 <- gapminder %>%
@@ -108,7 +127,7 @@ ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   geom_point()
 ```
 
-Some countries have **much more** population than others where we need to scale the data using **scale_x_log10()**.
+Some countries have **much more** population than others where we need to scale the data using **scale_x\_log10()**.
 
 ```{r}
 gapminder_1952 <- gapminder %>%
@@ -118,7 +137,8 @@ ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   scale_x_log10()
 ```
 
-### Faceting
+## Faceting
+
 To give a graph to each categorical variable, divide data into subplots
 
 ```{r}
@@ -129,6 +149,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)
 ```
 
 ## Line plot
+
 ```{r message=FALSE, warning=FALSE}
 # Create a line plot showing the change in medianGdpPercap by continent over time
 by_year_continent <- gapminder %>%
@@ -142,6 +163,7 @@ ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent))
 ```
 
 ## Bar plot
+
 ```{r}
 # Create a bar plot showing medianGdp by continent
 by_continent <- gapminder %>%
@@ -154,6 +176,7 @@ ggplot(by_continent, aes(x = continent, y = medianGdpPercap, color = continent))
 ```
 
 ## Histogram
+
 ```{r message=FALSE, warning=FALSE}
 # Create a histogram of population (pop), with x on a log scale
 gapminder_1952 <- gapminder %>%
@@ -164,6 +187,7 @@ ggplot(gapminder_1952, aes(x = pop))+
 ```
 
 ## Box plot
+
 ```{r}
 # Create a boxplot to compare GDP per capita across continents
 gapminder_1957 <- gapminder %>%
@@ -175,7 +199,9 @@ ggplot(gapminder_1957, aes(x = continent, y = gdpPercap)) +
 ```
 
 ## Asthetics
+
 ### Size and Color
+
 ```{r}
 ggplot(gapminder_1952, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) + 
   geom_point() + 
@@ -183,6 +209,7 @@ ggplot(gapminder_1952, aes(x = gdpPercap, y = lifeExp, color = continent, size =
 ```
 
 ### Title
+
 ```{r}
 # Add a title to this graph: "Comparing GDP per capita across continents"
 ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
@@ -192,6 +219,7 @@ ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
 ```
 
 ### Legend label by x-axis variable
+
 ```{r}
 ggplot(gapminder_1952, aes(x = continent, y = gdpPercap, fill = continent)) +
   geom_boxplot() +
