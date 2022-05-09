@@ -1,0 +1,239 @@
+---
+title: Tidyverse Dplyr Package
+author: Sikai Huang
+date: '2022-05-08'
+categories:
+  - R
+slug: dplyr-package
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    
+---
+
+
+
+<div id="introduction-to-dplyr" class="section level1">
+<h1>Introduction to dplyr</h1>
+<div id="essential-package" class="section level2">
+<h2>Essential package</h2>
+<pre class="r"><code>library(dplyr)
+library(gapminder) # a built-in dataset called &quot;gapminder&quot; in R studio</code></pre>
+</div>
+<div id="filter" class="section level2">
+<h2>Filter</h2>
+<p>Extracting a subset from observations, only containing the row of chosen variables.</p>
+<pre class="r"><code>gapminder %&gt;%
+  filter(year == 2002, country == &quot;China&quot;) 
+## # A tibble: 1 × 6
+##   country continent  year lifeExp        pop gdpPercap
+##   &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;      &lt;int&gt;     &lt;dbl&gt;
+## 1 China   Asia       2002    72.0 1280400000     3119.</code></pre>
+</div>
+<div id="arrange" class="section level2">
+<h2>Arrange</h2>
+<p>Sortng observations in ascending or descending order of a particular variable.</p>
+<pre class="r"><code># Sort in descending order of lifeExp
+gapminder %&gt;%
+  arrange(desc(lifeExp))  # the example of ascending order is the default setup not shown here</code></pre>
+<pre><code>## # A tibble: 1,704 × 6
+##    country          continent  year lifeExp       pop gdpPercap
+##    &lt;fct&gt;            &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;
+##  1 Japan            Asia       2007    82.6 127467972    31656.
+##  2 Hong Kong, China Asia       2007    82.2   6980412    39725.
+##  3 Japan            Asia       2002    82   127065841    28605.
+##  4 Iceland          Europe     2007    81.8    301931    36181.
+##  5 Switzerland      Europe     2007    81.7   7554661    37506.
+##  6 Hong Kong, China Asia       2002    81.5   6762476    30209.
+##  7 Australia        Oceania    2007    81.2  20434176    34435.
+##  8 Spain            Europe     2007    80.9  40448191    28821.
+##  9 Sweden           Europe     2007    80.9   9031088    33860.
+## 10 Israel           Asia       2007    80.7   6426679    25523.
+## # … with 1,694 more rows</code></pre>
+</div>
+<div id="mutate" class="section level2">
+<h2>Mutate</h2>
+<p>Using mutate to change(overwrite an existing one) or create a column</p>
+<pre class="r"><code># Use mutate to change the lifeExp
+gapminder %&gt;%
+  mutate(lifeExp = lifeExp * 12)
+# Use mutate to create a new column called lifeExpMonths
+gapminder %&gt;%
+  mutate(lifeExpMonths = lifeExp * 12)</code></pre>
+</div>
+<div id="filter_arrange_mutate" class="section level2">
+<h2>Filter_Arrange_Mutate</h2>
+<pre class="r"><code># Filter, mutate, and arrange the gapminder dataset
+gapminder %&gt;%
+  filter(country == &quot;Japan&quot;) %&gt;%
+  mutate(lifeExpMonths = lifeExp * 12) %&gt;%
+  arrange(desc(lifeExpMonths))</code></pre>
+<pre><code>## # A tibble: 12 × 7
+##    country continent  year lifeExp       pop gdpPercap lifeExpMonths
+##    &lt;fct&gt;   &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;         &lt;dbl&gt;
+##  1 Japan   Asia       2007    82.6 127467972    31656.          991.
+##  2 Japan   Asia       2002    82   127065841    28605.          984 
+##  3 Japan   Asia       1997    80.7 125956499    28817.          968.
+##  4 Japan   Asia       1992    79.4 124329269    26825.          952.
+##  5 Japan   Asia       1987    78.7 122091325    22376.          944.
+##  6 Japan   Asia       1982    77.1 118454974    19384.          925.
+##  7 Japan   Asia       1977    75.4 113872473    16610.          905.
+##  8 Japan   Asia       1972    73.4 107188273    14779.          881.
+##  9 Japan   Asia       1967    71.4 100825279     9848.          857.
+## 10 Japan   Asia       1962    68.7  95831757     6577.          825.
+## 11 Japan   Asia       1957    65.5  91563009     4318.          786 
+## 12 Japan   Asia       1952    63.0  86459025     3217.          756.</code></pre>
+</div>
+</div>
+<div id="grouping-and-summarising" class="section level1">
+<h1>Grouping and Summarising</h1>
+<pre class="r"><code>library(dplyr)
+library(gapminder)</code></pre>
+<div id="summarising" class="section level2">
+<h2>Summarising</h2>
+<pre class="r"><code>gapminder %&gt;%
+  filter(year == 2007) %&gt;%
+  summarize(medianLifeExp = median(lifeExp, na.rm = TRUE),
+            maxGdpPercap = max(gdpPercap, na.rm = TRUE))</code></pre>
+<pre><code>## # A tibble: 1 × 2
+##   medianLifeExp maxGdpPercap
+##           &lt;dbl&gt;        &lt;dbl&gt;
+## 1          71.9       49357.</code></pre>
+</div>
+<div id="grouping" class="section level2">
+<h2>Grouping</h2>
+<pre class="r"><code>gapminder %&gt;%
+  filter(year == 2007) %&gt;%
+  group_by(continent) %&gt;%
+  summarize(meanLifeExp = mean(lifeExp),
+            totalPop = sum(pop)) # yield a value to each continent in a total of 5</code></pre>
+<pre><code>## # A tibble: 5 × 3
+##   continent meanLifeExp   totalPop
+##   &lt;fct&gt;           &lt;dbl&gt;      &lt;dbl&gt;
+## 1 Africa           54.8  929539692
+## 2 Americas         73.6  898871184
+## 3 Asia             70.7 3811953827
+## 4 Europe           77.6  586098529
+## 5 Oceania          80.7   24549947</code></pre>
+</div>
+<div id="visualizing-mediangdppercap-within-each-continent-within-each-year" class="section level2">
+<h2>Visualizing medianGdpPercap within each continent within each year</h2>
+<pre class="r"><code>by_year_continent &lt;- gapminder %&gt;%
+  group_by(continent, year) %&gt;%
+  summarize(medianGdpPercap = median(gdpPercap))</code></pre>
+<pre class="r"><code># Plot the change in medianGdpPercap in each continent over time
+library(ggplot2)
+ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) +
+  geom_point() +
+  expand_limits(y = 0) # To make sure the plot&#39;s y-axis includes zero</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+</div>
+<div id="data-visualisation" class="section level1">
+<h1>Data visualisation</h1>
+<div id="essential-package-1" class="section level2">
+<h2>Essential package</h2>
+<pre class="r"><code>library(dplyr)
+library(gapminder)
+library(ggplot2)</code></pre>
+</div>
+<div id="scatter-plot" class="section level2">
+<h2>Scatter plot</h2>
+<pre class="r"><code># Create gapminder_1952
+gapminder_1952 &lt;- gapminder %&gt;%
+  filter(year == 1952)
+# Create a scatter plot with pop on the x-axis and lifeExp on the y-axis
+ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
+  geom_point()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Some countries have <strong>much more</strong> population than others where we need to scale the data using <strong>scale_x_log10()</strong>.</p>
+<pre class="r"><code>gapminder_1952 &lt;- gapminder %&gt;%
+  filter(year == 1952)
+ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
+  geom_point() +
+  scale_x_log10()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div id="faceting" class="section level3">
+<h3>Faceting</h3>
+<p>To give a graph to each categorical variable, divide data into subplots</p>
+<pre class="r"><code>ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop))+
+  geom_point() +
+  scale_x_log10() +
+  facet_wrap(~ year) # &quot;~ year&quot; means by year</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+</div>
+<div id="line-plot" class="section level2">
+<h2>Line plot</h2>
+<pre class="r"><code># Create a line plot showing the change in medianGdpPercap by continent over time
+by_year_continent &lt;- gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarize(medianGdpPercap = median(gdpPercap))
+
+ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) +
+  geom_line() +
+  expand_limits(y = 0)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="bar-plot" class="section level2">
+<h2>Bar plot</h2>
+<pre class="r"><code># Create a bar plot showing medianGdp by continent
+by_continent &lt;- gapminder %&gt;%
+  filter(year == 1952) %&gt;%
+  group_by(continent) %&gt;%
+  summarize(medianGdpPercap = median(gdpPercap))
+
+ggplot(by_continent, aes(x = continent, y = medianGdpPercap, color = continent)) +
+  geom_col()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="histogram" class="section level2">
+<h2>Histogram</h2>
+<pre class="r"><code># Create a histogram of population (pop), with x on a log scale
+gapminder_1952 &lt;- gapminder %&gt;%
+  filter(year == 1952)
+ggplot(gapminder_1952, aes(x = pop))+
+  geom_histogram()+
+  scale_x_log10()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="box-plot" class="section level2">
+<h2>Box plot</h2>
+<pre class="r"><code># Create a boxplot to compare GDP per capita across continents
+gapminder_1957 &lt;- gapminder %&gt;%
+  filter(year == 1957)
+
+ggplot(gapminder_1957, aes(x = continent, y = gdpPercap)) +
+  geom_boxplot() +
+  scale_y_log10()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+<div id="asthetics" class="section level2">
+<h2>Asthetics</h2>
+<div id="size-and-color" class="section level3">
+<h3>Size and Color</h3>
+<pre class="r"><code>ggplot(gapminder_1952, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) + 
+  geom_point() + 
+  scale_x_log10()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="title" class="section level3">
+<h3>Title</h3>
+<pre class="r"><code># Add a title to this graph: &quot;Comparing GDP per capita across continents&quot;
+ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
+  geom_boxplot() +
+  scale_y_log10() +
+  labs(title = &quot;Comparing GDP per capita across continents&quot;, x = &quot;where continent&quot;, y = &quot;how much GDP per capita&quot;) # Or plot + ggtitle(&quot;Comparing GDP per capita across continents&quot;) + xlab(&quot;where continent&quot;) + ylab(&quot;how much gdpPercap&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+<div id="legend-label-by-x-axis-variable" class="section level3">
+<h3>Legend label by x-axis variable</h3>
+<pre class="r"><code>ggplot(gapminder_1952, aes(x = continent, y = gdpPercap, fill = continent)) +
+  geom_boxplot() +
+  scale_y_log10() +
+  labs(title = &quot;Comparing GDP per capita across continents&quot;, x = &quot;where continent&quot;, y = &quot;how much GDP per capita&quot;, fill = &quot;Continent&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+</div>
+</div>
+</div>

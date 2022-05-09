@@ -1,0 +1,7 @@
+"0","ggplot(gapminder_1952, aes(x = pop))+
+  geom_histogram()+
+  scale_x_log10()
+"
+"2","`stat_bin()` using `bins = 30`. Pick better value with
+`binwidth`.
+"

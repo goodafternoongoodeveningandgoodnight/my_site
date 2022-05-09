@@ -1,0 +1,6 @@
+"0","ggplot(by_continent, aes(x = continent, y = medianGdpPercap, color = continent)) +
+  geom_col(fill = continent)
+"
+"2","Error in layer(data = data, mapping = mapping, stat = ""identity"", geom = GeomCol,  : 
+  object 'continent' not found
+"
