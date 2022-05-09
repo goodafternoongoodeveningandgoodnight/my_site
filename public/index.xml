@@ -13,8 +13,7 @@
       <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/05/08/dplyr-package/</guid>
-      <description>Introduction to dplyr Essential package library(dplyr) library(gapminder) # a built-in dataset called &amp;quot;gapminder&amp;quot; in R studio  Filter Extracting a subset from observations, only containing the row of chosen variables.
-gapminder %&amp;gt;% filter(year == 2002, country == &amp;quot;China&amp;quot;) ## # A tibble: 1 × 6 ## country continent year lifeExp pop gdpPercap ## &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; ## 1 China Asia 2002 72.0 1280400000 3119.  Arrange Sortng observations in ascending or descending order of a particular variable.</description>
+      <description>Introduction to dplyr  Essential package Filter Arrange Mutate Filter_Arrange_Mutate  Grouping and Summarising  Summarising Grouping Visualizing medianGdpPercap within each continent within each year  Data visualisation  Essential package Scatter plot Faceting Line plot Bar plot Histogram Box plot Asthetics    Introduction to dplyr Essential package library(dplyr) library(gapminder) # a built-in dataset called &amp;quot;gapminder&amp;quot; in R studio  Filter Extracting a subset from observations, only containing the row of chosen variables.</description>
     </item>
     
     <item>
@@ -25,25 +24,6 @@ gapminder %&amp;gt;% filter(year == 2002, country == &amp;quot;China&amp;quot;) 
       <guid>/post/2022/05/06/r-shortcut/</guid>
       <description> R shortcuts make the programming life easier. They are available directly in the Navigation Bar - Tools- Keyboard shortcuts help. I listed commonly used shortcuts that might help R beginners (students) like me:
  Table: Shortcuts make life easier   Windows &amp;amp; Linux Mac    Open Document Ctrl + O Cmd + O  New R Script Ctrl + Shift + N Cmd + Shift + N  Run Selected Line Ctrl + Shift + ↵ Cmd + Shift + ↵  Undo Ctrl + Z Cmd + Z  Redo Ctrl + Shift + Z Cmd + Shift + Z  Copy Ctrl + C Cmd + C  Paste Ctrl + Y Cmd + Y  Cut Ctrl + X Cmd + X  Move Lines Up/Down Alt+Up/Down Option+Up/Down  Delete Line Ctrl + D Cmd + D  Move to Line start Ctrl + Left Cmd + Left  Move to Line end Ctrl + Right Cmd + Right  Select to Line Start Ctrl + Shift + Left Cmd + + Shift + Left  Select to Line End Ctrl + Shift + Right Cmd + + Shift + Right  Insert Pipe Operator( %&amp;gt;% ) Ctrl + Shift + M Cmd + Shift + M  Find Ctrl + F Cmd + F    </description>
-    </item>
-    
-    <item>
-      <title>Another Note on A blogdown Tutorial</title>
-      <link>/note/2022/05/03/another-note/</link>
-      <pubDate>Tue, 03 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/note/2022/05/03/another-note/</guid>
-      <description>Yihui recommended an awesome tutorial on blogdown written by Alison. I have to admit this is the best blogdown tutorial I have seen so far.</description>
-    </item>
-    
-    <item>
-      <title>A Quick Note on Two Beautiful Websites</title>
-      <link>/note/2022/05/02/a-quick-note/</link>
-      <pubDate>Mon, 02 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/note/2022/05/02/a-quick-note/</guid>
-      <description>Yihui recommended the two most impressive websites based on blogdown are:
- Rob J Hyndman&amp;rsquo;s personal website. Live Free or Dichotomize by Lucy and Nick et al.  There will be more.</description>
     </item>
     
     <item>
@@ -58,18 +38,7 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     </item>
     
     <item>
-      <title>A Plain Markdown Post</title>
-      <link>/post/2016/02/14/a-plain-markdown-post/</link>
-      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2016/02/14/a-plain-markdown-post/</guid>
-      <description>This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section.
-1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
- You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
+      <title>About theme</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

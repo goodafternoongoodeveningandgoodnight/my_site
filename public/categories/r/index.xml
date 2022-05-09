@@ -13,8 +13,7 @@
       <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/05/08/dplyr-package/</guid>
-      <description>Introduction to dplyr Essential package library(dplyr) library(gapminder) # a built-in dataset called &amp;quot;gapminder&amp;quot; in R studio  Filter Extracting a subset from observations, only containing the row of chosen variables.
-gapminder %&amp;gt;% filter(year == 2002, country == &amp;quot;China&amp;quot;) ## # A tibble: 1 × 6 ## country continent year lifeExp pop gdpPercap ## &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; ## 1 China Asia 2002 72.0 1280400000 3119.  Arrange Sortng observations in ascending or descending order of a particular variable.</description>
+      <description>Introduction to dplyr  Essential package Filter Arrange Mutate Filter_Arrange_Mutate  Grouping and Summarising  Summarising Grouping Visualizing medianGdpPercap within each continent within each year  Data visualisation  Essential package Scatter plot Faceting Line plot Bar plot Histogram Box plot Asthetics    Introduction to dplyr Essential package library(dplyr) library(gapminder) # a built-in dataset called &amp;quot;gapminder&amp;quot; in R studio  Filter Extracting a subset from observations, only containing the row of chosen variables.</description>
     </item>
     
     <item>

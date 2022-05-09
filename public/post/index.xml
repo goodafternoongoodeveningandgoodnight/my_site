@@ -13,8 +13,7 @@
       <pubDate>Sun, 08 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/05/08/dplyr-package/</guid>
-      <description>Introduction to dplyr Essential package library(dplyr) library(gapminder) # a built-in dataset called &amp;quot;gapminder&amp;quot; in R studio  Filter Extracting a subset from observations, only containing the row of chosen variables.
-gapminder %&amp;gt;% filter(year == 2002, country == &amp;quot;China&amp;quot;) ## # A tibble: 1 × 6 ## country continent year lifeExp pop gdpPercap ## &amp;lt;fct&amp;gt; &amp;lt;fct&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; ## 1 China Asia 2002 72.0 1280400000 3119.  Arrange Sortng observations in ascending or descending order of a particular variable.</description>
+      <description>Introduction to dplyr  Essential package Filter Arrange Mutate Filter_Arrange_Mutate  Grouping and Summarising  Summarising Grouping Visualizing medianGdpPercap within each continent within each year  Data visualisation  Essential package Scatter plot Faceting Line plot Bar plot Histogram Box plot Asthetics    Introduction to dplyr Essential package library(dplyr) library(gapminder) # a built-in dataset called &amp;quot;gapminder&amp;quot; in R studio  Filter Extracting a subset from observations, only containing the row of chosen variables.</description>
     </item>
     
     <item>
@@ -36,17 +35,6 @@ gapminder %&amp;gt;% filter(year == 2002, country == &amp;quot;China&amp;quot;) 
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>A Plain Markdown Post</title>
-      <link>/post/2016/02/14/a-plain-markdown-post/</link>
-      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2016/02/14/a-plain-markdown-post/</guid>
-      <description>This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section.
-1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
- You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.</description>
     </item>
     
   </channel>

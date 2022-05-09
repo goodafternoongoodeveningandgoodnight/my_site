@@ -4,10 +4,12 @@ author: Sikai Huang
 date: '2022-05-08'
 categories:
   - R
+tags:
+  - RStudio
 slug: dplyr-package
 output:
   blogdown::html_page:
-    toc: true
+    toc: yes
     toc_depth: 2
 ---
 

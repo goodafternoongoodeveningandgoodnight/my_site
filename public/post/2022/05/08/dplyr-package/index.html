@@ -19,7 +19,7 @@
       
       <li><a href="/about/">About</a></li>
       
-      <li><a href="/blogs">Blogs</a></li>
+      <li><a href="/blogs/">Blogs</a></li>
       
       <li><a href="/categories/">Categories</a></li>
       
@@ -38,6 +38,35 @@
 <main>
 
 
+<div id="TOC">
+<ul>
+<li><a href="#introduction-to-dplyr">Introduction to dplyr</a>
+<ul>
+<li><a href="#essential-package">Essential package</a></li>
+<li><a href="#filter">Filter</a></li>
+<li><a href="#arrange">Arrange</a></li>
+<li><a href="#mutate">Mutate</a></li>
+<li><a href="#filter_arrange_mutate">Filter_Arrange_Mutate</a></li>
+</ul></li>
+<li><a href="#grouping-and-summarising">Grouping and Summarising</a>
+<ul>
+<li><a href="#summarising">Summarising</a></li>
+<li><a href="#grouping">Grouping</a></li>
+<li><a href="#visualizing-mediangdppercap-within-each-continent-within-each-year">Visualizing medianGdpPercap within each continent within each year</a></li>
+</ul></li>
+<li><a href="#data-visualisation">Data visualisation</a>
+<ul>
+<li><a href="#essential-package-1">Essential package</a></li>
+<li><a href="#scatter-plot">Scatter plot</a></li>
+<li><a href="#faceting">Faceting</a></li>
+<li><a href="#line-plot">Line plot</a></li>
+<li><a href="#bar-plot">Bar plot</a></li>
+<li><a href="#histogram">Histogram</a></li>
+<li><a href="#box-plot">Box plot</a></li>
+<li><a href="#asthetics">Asthetics</a></li>
+</ul></li>
+</ul>
+</div>
 
 <div id="introduction-to-dplyr" class="section level1">
 <h1>Introduction to dplyr</h1>
@@ -82,10 +111,38 @@ gapminder %&gt;%
 <p>Using mutate to change(overwrite an existing one) or create a column</p>
 <pre class="r"><code># Use mutate to change the lifeExp
 gapminder %&gt;%
-  mutate(lifeExp = lifeExp * 12)
-# Use mutate to create a new column called lifeExpMonths
+  mutate(lifeExp = lifeExp * 12)</code></pre>
+<pre><code>## # A tibble: 1,704 × 6
+##    country     continent  year lifeExp      pop gdpPercap
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+##  1 Afghanistan Asia       1952    346.  8425333      779.
+##  2 Afghanistan Asia       1957    364.  9240934      821.
+##  3 Afghanistan Asia       1962    384. 10267083      853.
+##  4 Afghanistan Asia       1967    408. 11537966      836.
+##  5 Afghanistan Asia       1972    433. 13079460      740.
+##  6 Afghanistan Asia       1977    461. 14880372      786.
+##  7 Afghanistan Asia       1982    478. 12881816      978.
+##  8 Afghanistan Asia       1987    490. 13867957      852.
+##  9 Afghanistan Asia       1992    500. 16317921      649.
+## 10 Afghanistan Asia       1997    501. 22227415      635.
+## # … with 1,694 more rows</code></pre>
+<pre class="r"><code># Use mutate to create a new column called lifeExpMonths
 gapminder %&gt;%
   mutate(lifeExpMonths = lifeExp * 12)</code></pre>
+<pre><code>## # A tibble: 1,704 × 7
+##    country     continent  year lifeExp      pop gdpPercap lifeExpMonths
+##    &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;         &lt;dbl&gt;
+##  1 Afghanistan Asia       1952    28.8  8425333      779.          346.
+##  2 Afghanistan Asia       1957    30.3  9240934      821.          364.
+##  3 Afghanistan Asia       1962    32.0 10267083      853.          384.
+##  4 Afghanistan Asia       1967    34.0 11537966      836.          408.
+##  5 Afghanistan Asia       1972    36.1 13079460      740.          433.
+##  6 Afghanistan Asia       1977    38.4 14880372      786.          461.
+##  7 Afghanistan Asia       1982    39.9 12881816      978.          478.
+##  8 Afghanistan Asia       1987    40.8 13867957      852.          490.
+##  9 Afghanistan Asia       1992    41.7 16317921      649.          500.
+## 10 Afghanistan Asia       1997    41.8 22227415      635.          501.
+## # … with 1,694 more rows</code></pre>
 </div>
 <div id="filter_arrange_mutate" class="section level2">
 <h2>Filter_Arrange_Mutate</h2>
@@ -142,38 +199,21 @@ library(gapminder)</code></pre>
 ## 4 Europe           77.6  586098529
 ## 5 Oceania          80.7   24549947</code></pre>
 </div>
-<div id="visualizing-median-life-expectancy-over-time" class="section level2">
-<h2>Visualizing median life expectancy over time</h2>
-<pre class="r"><code>gapminder_year &lt;- gapminder %&gt;%
-  group_by(year) %&gt;%
-  summarize(medianLifeExp = median(lifeExp),
-            maxGdpPercap = max(gdpPercap))
-gapminder_year</code></pre>
-<pre><code>## # A tibble: 12 × 3
-##     year medianLifeExp maxGdpPercap
-##    &lt;int&gt;         &lt;dbl&gt;        &lt;dbl&gt;
-##  1  1952          45.1      108382.
-##  2  1957          48.4      113523.
-##  3  1962          50.9       95458.
-##  4  1967          53.8       80895.
-##  5  1972          56.5      109348.
-##  6  1977          59.7       59265.
-##  7  1982          62.4       33693.
-##  8  1987          65.8       31541.
-##  9  1992          67.7       34933.
-## 10  1997          69.4       41283.
-## 11  2002          70.8       44684.
-## 12  2007          71.9       49357.</code></pre>
-<pre class="r"><code># Create a scatter plot showing the change in medianLifeExp over time
+<div id="visualizing-mediangdppercap-within-each-continent-within-each-year" class="section level2">
+<h2>Visualizing medianGdpPercap within each continent within each year</h2>
+<pre class="r"><code>by_year_continent &lt;- gapminder %&gt;%
+  group_by(continent, year) %&gt;%
+  summarize(medianGdpPercap = median(gdpPercap))</code></pre>
+<pre class="r"><code># Plot the change in medianGdpPercap in each continent over time
 library(ggplot2)
-ggplot(gapminder_year, aes(x = year, y = medianLifeExp)) + 
+ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) +
   geom_point() +
   expand_limits(y = 0) # To make sure the plot&#39;s y-axis includes zero</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 </div>
-<div id="data-visualisation-using-ggplot" class="section level1">
-<h1>Data visualisation using ggplot</h1>
+<div id="data-visualisation" class="section level1">
+<h1>Data visualisation</h1>
 <div id="essential-package-1" class="section level2">
 <h2>Essential package</h2>
 <pre class="r"><code>library(dplyr)
@@ -188,29 +228,94 @@ gapminder_1952 &lt;- gapminder %&gt;%
 # Create a scatter plot with pop on the x-axis and lifeExp on the y-axis
 ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   geom_point()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <p>Some countries have <strong>much more</strong> population than others where we need to scale the data using <strong>scale_x_log10()</strong>.</p>
 <pre class="r"><code>gapminder_1952 &lt;- gapminder %&gt;%
   filter(year == 1952)
 ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   geom_point() +
   scale_x_log10()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<div id="size-and-color-in-plots" class="section level3">
-<h3>Size and Color in plots</h3>
-<pre class="r"><code>ggplot(gapminder_1952, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) + 
-  geom_point() + 
-  scale_x_log10()</code></pre>
 <p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
-<div id="faceting" class="section level3">
-<h3>Faceting</h3>
+<div id="faceting" class="section level2">
+<h2>Faceting</h2>
 <p>To give a graph to each categorical variable, divide data into subplots</p>
 <pre class="r"><code>ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop))+
   geom_point() +
   scale_x_log10() +
   facet_wrap(~ year) # &quot;~ year&quot; means by year</code></pre>
 <p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="line-plot" class="section level2">
+<h2>Line plot</h2>
+<pre class="r"><code># Create a line plot showing the change in medianGdpPercap by continent over time
+by_year_continent &lt;- gapminder %&gt;%
+  group_by(year, continent) %&gt;%
+  summarize(medianGdpPercap = median(gdpPercap))
+
+ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) +
+  geom_line() +
+  expand_limits(y = 0)</code></pre>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+</div>
+<div id="bar-plot" class="section level2">
+<h2>Bar plot</h2>
+<pre class="r"><code># Create a bar plot showing medianGdp by continent
+by_continent &lt;- gapminder %&gt;%
+  filter(year == 1952) %&gt;%
+  group_by(continent) %&gt;%
+  summarize(medianGdpPercap = median(gdpPercap))
+
+ggplot(by_continent, aes(x = continent, y = medianGdpPercap, color = continent)) +
+  geom_col()</code></pre>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="histogram" class="section level2">
+<h2>Histogram</h2>
+<pre class="r"><code># Create a histogram of population (pop), with x on a log scale
+gapminder_1952 &lt;- gapminder %&gt;%
+  filter(year == 1952)
+ggplot(gapminder_1952, aes(x = pop))+
+  geom_histogram()+
+  scale_x_log10()</code></pre>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+<div id="box-plot" class="section level2">
+<h2>Box plot</h2>
+<pre class="r"><code># Create a boxplot to compare GDP per capita across continents
+gapminder_1957 &lt;- gapminder %&gt;%
+  filter(year == 1957)
+
+ggplot(gapminder_1957, aes(x = continent, y = gdpPercap)) +
+  geom_boxplot() +
+  scale_y_log10()</code></pre>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="asthetics" class="section level2">
+<h2>Asthetics</h2>
+<div id="size-and-color" class="section level3">
+<h3>Size and Color</h3>
+<pre class="r"><code>ggplot(gapminder_1952, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) + 
+  geom_point() + 
+  scale_x_log10()</code></pre>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+<div id="title" class="section level3">
+<h3>Title</h3>
+<pre class="r"><code># Add a title to this graph: &quot;Comparing GDP per capita across continents&quot;
+ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
+  geom_boxplot() +
+  scale_y_log10() +
+  labs(title = &quot;Comparing GDP per capita across continents&quot;, x = &quot;where continent&quot;, y = &quot;how much GDP per capita&quot;) # Or plot + ggtitle(&quot;Comparing GDP per capita across continents&quot;) + xlab(&quot;where continent&quot;) + ylab(&quot;how much gdpPercap&quot;)</code></pre>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+</div>
+<div id="legend-label-by-x-axis-variable" class="section level3">
+<h3>Legend label by x-axis variable</h3>
+<pre class="r"><code>ggplot(gapminder_1952, aes(x = continent, y = gdpPercap, fill = continent)) +
+  geom_boxplot() +
+  scale_y_log10() +
+  labs(title = &quot;Comparing GDP per capita across continents&quot;, x = &quot;where continent&quot;, y = &quot;how much GDP per capita&quot;, fill = &quot;Continent&quot;)</code></pre>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -225,7 +330,7 @@ ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
 
   
   <hr/>
-  © <a href="https://huangsikai.org">Sikai Huang</a> 2022 &ndash; 2022 |<a href="https://www.linkedin.com/in/sikai-huang-59864a233/">Linkdin</a> |<a href="https://github.com/goodafternoongoodeveningandgoodnight">Github</a> | <a href="https://weibo.com/u/3211883205">Weibo</a>
+  © <a href="https://huangsikai.org">Sikai Huang</a> 2022 &ndash; 2022 |<a href="https://www.linkedin.com/in/sikai-huang-59864a233/">Linkdin</a> |<a href="https://github.com/goodafternoongoodeveningandgoodnight">Github</a> |<a href="https://weibo.com/u/3211883205">Weibo</a>
   
   </footer>
   </body>

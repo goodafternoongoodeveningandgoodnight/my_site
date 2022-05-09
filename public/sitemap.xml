@@ -26,21 +26,6 @@
     <loc>/tags/</loc>
     <lastmod>2022-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/note/2022/05/03/another-note/</loc>
-    <lastmod>2022-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/example/</loc>
-    <lastmod>2022-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/note/</loc>
-    <lastmod>2022-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/tutorial/</loc>
-    <lastmod>2022-05-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/note/2022/05/02/a-quick-note/</loc>
-    <lastmod>2022-05-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/post/2020/12/01/hello-r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
@@ -52,24 +37,6 @@
   </url><url>
     <loc>/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>/post/2016/02/14/a-plain-markdown-post/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/blogdown/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/hugo/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/markdown/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/mathjax/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/pandoc/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/about/</loc>
   </url>
