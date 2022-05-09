@@ -33,7 +33,7 @@ menu:
 
 params:
   description: "A website built through Hugo and blogdown."
-  footer: "&copy; [Sikai Huang](https://huangsikai.org) 2022 -- {Year} |[Linkdin](https://www.linkedin.com/in/sikai-huang-59864a233/) |[Github](https://github.com/goodafternoongoodeveningandgoodnight) | [Weibo](https://weibo.com/u/3211883205)"
+  footer: "&copy; [Sikai Huang](https://huangsikai.org) 2022 -- {Year} |[Linkdin](https://www.linkedin.com/in/sikai-huang-59864a233/) |[Github](https://github.com/goodafternoongoodeveningandgoodnight) |[Weibo](https://weibo.com/u/3211883205)"
 
 markup:
   highlight:
