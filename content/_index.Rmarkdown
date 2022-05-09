@@ -4,7 +4,7 @@ title: Home
 <img src="/./_index_files/home_logo.png" style="max-width:15%;min-width:40px;float:right;" alt="Sikai" />
 
 # SIKAI HUANG
-## _A student, a student, and a student_
+## <a href="https://huangsikai.org/" style="color: black; text-decoration: underline;text-decoration-style: dotted;"> _A student, a student, and a student_ </a>
 
 I am an islander living on [Pingtan Island](https://www.ptnet.cn/), the Chinese fifth-largest island with a super beautiful natural environment. Pingtan is also the nearest place to Taiwan. I major in Public Health and love the quantitative study and computer science. However, prior to my postgraduate study, I was never exposed to quantitative research and computer science. It sounds funny that I struggled to pass the Visual Basic exam several years ago.
 

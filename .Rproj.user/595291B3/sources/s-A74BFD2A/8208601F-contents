@@ -1,5 +1,0 @@
-Description <- c("New R script", "Run the selected line")
-Windows<- c ("Ctrl + Shift + N", "Ctrl + ↵")
-Mac <- c("Cmd + Shift", "Cmd + ↵")
-?as.data.frame
-shortcuts <- data.frame(Description, Windows, Mac)

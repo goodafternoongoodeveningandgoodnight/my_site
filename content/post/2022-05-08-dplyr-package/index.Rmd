@@ -6,11 +6,9 @@ categories:
   - R
 slug: dplyr-package
 output:
-  html_document: 
-    toc: yes
+  blogdown::html_page:
+    toc: true
     toc_depth: 2
-    highlight: monochrome
-    theme: cerulean
 ---
 
 # Introduction to dplyr
