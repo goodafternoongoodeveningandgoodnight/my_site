@@ -1,0 +1,29 @@
+---
+title: Tidyverse Tidyr Package
+author: Sikai Huang
+date: '2022-05-09'
+slug: tidyverse-tidyr-package
+categories:
+  - R
+tags:
+  - RStudio
+---
+
+How to do with messy data at hand? What does tidy data looks like?
+![TidyData](images/tidy_data.png)
+Tidy data includes three key points:
+- each row includes each observation
+- each column stands for each variable
+- each cell contains each value
+
+
+let's look at an example of messy data:
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyr)
+library(DT)
+
+data(package = "tidyr") # Buitl in dataset in the package Tidyer
+datatable(us_rent_income, options = list(pageLength = 5))
+```
+
+
