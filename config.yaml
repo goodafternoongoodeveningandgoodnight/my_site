@@ -21,7 +21,7 @@ menu:
       url: "/about/"
       weight: 2
     - name: Blogs
-      url: "/blogs"
+      url: "/blogs/"
       weight: 3
     - name: Categories
       url: "/categories/"
