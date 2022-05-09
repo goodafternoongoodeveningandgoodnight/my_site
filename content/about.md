@@ -1,6 +1,6 @@
 ---
 author: Sikai Huang
-title: About me
+title: About theme
 ---
 
 
