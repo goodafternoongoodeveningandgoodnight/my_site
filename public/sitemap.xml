@@ -2,23 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/categories/blog/</loc>
+    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/categories/</loc>
-    <lastmod>2022-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/daily-life/</loc>
+    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2022/05/11/how-is-everything-about-my-dissertation/</loc>
+    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/</loc>
-    <lastmod>2022-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/r/</loc>
-    <lastmod>2022-05-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/rstudio/</loc>
-    <lastmod>2022-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2022-05-08T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/r/</loc>
+    <lastmod>2022-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/rstudio/</loc>
+    <lastmod>2022-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2022/05/09/tidyverse-tidyr-package/</loc>
+    <lastmod>2022-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2022/05/09/to-whom-i-respect/</loc>
+    <lastmod>2022-05-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2022/05/08/dplyr-package/</loc>
     <lastmod>2022-05-08T00:00:00+00:00</lastmod>

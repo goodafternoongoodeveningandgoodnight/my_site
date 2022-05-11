@@ -1,5 +1,5 @@
 ---
-author: Sikai Huang
+author: By Yihui Xie
 title: About theme
 ---
 
