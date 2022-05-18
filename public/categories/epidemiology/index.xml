@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Epidemiology on Minimal, Meaningful, Mindful Sikai</title>
+    <link>/categories/epidemiology/</link>
+    <description>Recent content in Epidemiology on Minimal, Meaningful, Mindful Sikai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/epidemiology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Principles and Methods of Epidemiology</title>
+      <link>/post/2022/05/17/principles-and-methods-of-epidemiology/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/17/principles-and-methods-of-epidemiology/</guid>
+      <description>As a college student, I struggled to choose a career path and even the research of interest. I was amazed that there was a research field devoted to applying medicine and statistics to address the problems of health prevention and protection. That field is epidemiology. Epidemiologists are curious about why a specified population is more likely than others to become sick, be injured, or die young and why some countries and regions continue to be worst hit by the disease.</description>
+    </item>
+    
+  </channel>
+</rss>
