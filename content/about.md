@@ -1,6 +1,6 @@
 ---
 author: By Yihui Xie
-title: About theme
+title: About theme blogdown
 ---
 
 
