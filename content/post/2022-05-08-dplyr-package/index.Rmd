@@ -13,6 +13,8 @@ output:
     toc_depth: 2
 ---
 
+How popular **the dplyr package** is. Dplyr, one of the most fantastic packages in RStudio, able to carry out all data manipulation tasks! Here I listed the main verbs that are built in [dplyr](https://dplyr.tidyverse.org/).
+
 # Introduction to dplyr
 
 ## Essential package
@@ -225,3 +227,7 @@ ggplot(gapminder_1952, aes(x = continent, y = gdpPercap, fill = continent)) +
   scale_y_log10() +
   labs(title = "Comparing GDP per capita across continents", x = "where continent", y = "how much GDP per capita", fill = "Continent")
 ```
+
+## Cheat Sheet
+
+[![](images/download.png)](https://dplyr.tidyverse.org/)
