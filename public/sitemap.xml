@@ -3,15 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/categories/</loc>
-    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/epidemiology/</loc>
-    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-05-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/</loc>
+    <lastmod>2022-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/r/</loc>
+    <lastmod>2022-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/rstudio/</loc>
+    <lastmod>2022-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/post/2022/05/27/stringr-in-r/</loc>
+    <lastmod>2022-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-05-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/epidemiology/</loc>
     <lastmod>2022-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2022/05/17/principles-and-methods-of-epidemiology/</loc>
@@ -25,15 +37,6 @@
   </url><url>
     <loc>/post/2022/05/12/interaction-of-greenness-and-polygenic-risk-score-of-alzheimer-s-disease-on-risk-of-cognitive-impairment/</loc>
     <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/categories/r/</loc>
-    <lastmod>2022-05-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/rstudio/</loc>
-    <lastmod>2022-05-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/post/2022/05/09/tidyverse-tidyr-package/</loc>
     <lastmod>2022-05-09T00:00:00+00:00</lastmod>

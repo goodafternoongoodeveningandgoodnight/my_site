@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Minimal, Meaningful, Mindful Sikai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stringr in R</title>
+      <link>/post/2022/05/27/stringr-in-r/</link>
+      <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/27/stringr-in-r/</guid>
+      <description>Split up a string into pieces fruits &amp;lt;- c( &amp;ldquo;apples and oranges and pears and bananas&amp;rdquo;, &amp;ldquo;pineapples and mangos and guavas&amp;rdquo; )
+unlist(strsplit(fruits, &amp;quot; and &amp;ldquo;))</description>
+    </item>
+    
     <item>
       <title>Principles and Methods of Epidemiology</title>
       <link>/post/2022/05/17/principles-and-methods-of-epidemiology/</link>
@@ -35,7 +45,7 @@
     </item>
     
     <item>
-      <title>Tidyverse Tidyr Package</title>
+      <title>Tidyverse Tidyr Package (Updating)</title>
       <link>/post/2022/05/09/tidyverse-tidyr-package/</link>
       <pubDate>Mon, 09 May 2022 00:00:00 +0000</pubDate>
       

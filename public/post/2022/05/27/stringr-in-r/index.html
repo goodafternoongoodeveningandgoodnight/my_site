@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog | Minimal, Meaningful, Mindful Sikai</title>
+    <title>Stringr in R | Minimal, Meaningful, Mindful Sikai</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     
@@ -27,23 +27,21 @@
     <hr/>
     </nav>
 
+<div class="article-meta">
+<h1><span class="title">Stringr in R</span></h1>
+<h2 class="author">Sikai Huang</h2>
+<h2 class="date">2022/05/27</h2>
+</div>
 
+<main>
+<h2 id="split-up-a-string-into-pieces">Split up a string into pieces</h2>
+<p>fruits &lt;- c(
+&ldquo;apples and oranges and pears and bananas&rdquo;,
+&ldquo;pineapples and mangos and guavas&rdquo;
+)</p>
+<p>unlist(strsplit(fruits, &quot; and &ldquo;))</p>
 
-<h1>Blog</h1>
-
-
-
-
-<ul>
-  
-  
-  
-  <li>
-    <span class="date">2022/05/01</span>
-    <a href="/post/2022/05/01/to-whom-i-respect/">To whom I respect</a>
-  </li>
-  
-</ul>
+</main>
 
   <footer>
   <script defer src="//yihui.org/js/math-code.js"></script>

@@ -1,0 +1,101 @@
+---
+title: Tidyverse Stringr Package
+author: Sikai Huang
+date: '2022-05-27'
+slug: stringr-in-r
+categories:
+  - R
+tags:
+  - RStudio
+---
+
+The [**stringr**](https://stringr.tidyverse.org/index.html) package encompasses a series of verbs designed to make data manipulation work with strings as easy as possible, particular useful to wrangle the **survey data** (including string values).
+
+## Essential packages
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+library(stringr)
+```
+
+## Measure a string length
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+fruits <- c(
+  "apples and oranges and pears and bananas",
+  "pineapples and mangos and guavas")
+str_length(fruits) # Results include the whitespace
+
+```
+
+## Combine multiple strings into a string
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+str_c(fruits, collapse = " and ")
+```
+
+## Extract and replace substrings from a character vector
+
+If a vector contains multiple strings, it will return the subset of each string
+
+```{r echo=TRUE, message=TRUE, warning=TRUE}
+str_sub(fruits, 1, 6) 
+```
+
+## **Keep strings matching a pattern, or find positions**
+
+```{r echo=TRUE, message=TRUE, warning=TRUE}
+str_subset(fruits, "mangos")
+```
+
+## **Detect the presence or absence of a pattern**
+
+```{r echo=TRUE, message=TRUE, warning=TRUE}
+str_detect(fruits, "pears")
+str_detect(fruits, "^apples") # "^" refers to the string that starts with pattern
+str_detect(fruits, "guavas$") # "$" refers to the string that ends with pattern
+```
+
+## Counts the number of patterns
+
+```{r echo=TRUE, message=TRUE, warning=TRUE}
+str_count(fruits, "and")
+```
+
+## **Locate the position of patterns**
+
+```{r echo=TRUE, message=TRUE, warning=TRUE}
+str_locate(fruits, "banana")
+```
+
+## **Extract matching patterns from a string**
+
+```{r echo=TRUE, message=TRUE, warning=TRUE}
+str_extract(fruits, "bananas")
+```
+
+## Replaces the matches with new text
+
+```{r message=FALSE, warning=FALSE}
+str_replace(fruits, "s", "") # replace the first matched pattern
+str_replace_all(fruits, "s", "") # replace all matached components with new text in a string
+
+```
+
+## Split up a string into pieces
+
+```{r message=FALSE, warning=FALSE}
+fruits <- c(
+  "apples and oranges and pears and bananas",
+  "pineapples and mangos and guavas")
+str_split(fruits, " and ") # return a list
+```
+
+Using **unlist()** or **unnest()** to convert a list to a vector
+
+```{r}
+unlist(strsplit(fruits, " and "))
+```
+
+## Cheat Sheet
+
+[![](images/stringr.png)](https://stringr.tidyverse.org/index.html)
