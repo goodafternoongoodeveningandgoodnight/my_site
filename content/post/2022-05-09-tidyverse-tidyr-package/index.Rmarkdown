@@ -26,4 +26,30 @@ data(package = "tidyr") # Buitl in dataset in the package Tidyer
 datatable(us_rent_income, options = list(pageLength = 5))
 ```
 
+## Separate_a character column into multiple columns
+df contains strings with both a name and sort of drinks. We will tidy this dataset so that each variable gets its own column.
+```{r message=FALSE, warning=FALSE}
+library(tidyr)
+df <- data.frame(x = c("Joy:Milk", "Monica:Coffee", "Chandler:Tea", "Rachel:Juice", NA))
+df %>% separate(x, into = c("name","drink"), sep = ":", convert = TRUE) 
+```
 
+## Unite_Multiple columns into one by pasting strings together
+```{r}
+df <- data.frame(name = c("Joy", "Monica", NA), drink = c("Milk", "Coffee", NA))
+df
+df %>% unite("Love", name, drink, sep =" loves ", remove = FALSE)
+df %>% unite("Love", name, drink, sep =" loves ", na.rm = TRUE, remove = FALSE) # To remove missing values:
+```
+
+## Separate a collapsed column into multiple rows
+```{r}
+df <- data.frame(
+  name = c("Joy", "Monica/Chandler", "Rachel/Ross"),
+  drink = c("Milk", "Coffee/Tea", "Juice/Water")
+  )
+df %>% 
+  separate_rows(name, drink, sep = "/", convert = TRUE)
+```
+
+## 

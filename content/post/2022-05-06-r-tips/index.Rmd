@@ -13,22 +13,38 @@ slug: r-shortcut
 
 **R shortcuts** make the programming life easier. Full information is available directly in the ***Navigation Bar - Tools- Keyboard shortcuts help***. I listed commonly used shortcuts that might help **R beginners (students)** like me:
 
-|                  |  Windows & Linux| Mac|
-|:-----------------|:----:|:---:|
-|Open Document        | Ctrl + O|   Cmd + O| 
-|New R Script         | Ctrl + Shift + N|   Cmd + Shift + N|
-|Run current Line   | Ctrl +  ↵|   Cmd + ↵|  
-|Undo       | Ctrl + Z|   Cmd + Z|  
-|Redo         | Ctrl + Shift + Z|   Cmd + Shift + Z|  
-|Copy   | Ctrl + C|   Cmd + C|  
-|Paste       | Ctrl + Y|   Cmd + Y|  
-|Cut   | Ctrl + X|   Cmd + X|  
-|Move Lines Up/Down         | Alt+Up/Down|   Option+Up/Down|
-|Delete Line       | Ctrl + D|   Cmd + D|
-|Move to Line start         | Ctrl + Left|   Cmd + Left|  
-|Move to Line end         | Ctrl + Right|   Cmd + Right|  
-|Select to Line Start        | Ctrl + Shift + Left|   Cmd + + Shift + Left|  
-|Select to Line End        | Ctrl + Shift + Right|   Cmd + + Shift + Right|
-|Insert Pipe Operator( %>% )   | Ctrl + Shift + M|   Cmd + Shift + M| 
-|Find   | Ctrl + F|   Cmd + F| 
+|                              |   Windows & Linux    |          Mac          |
+|:-----------------------------|:--------------------:|:---------------------:|
+| Open Document                |       Ctrl + O       |        Cmd + O        |
+| New R Script                 |   Ctrl + Shift + N   |    Cmd + Shift + N    |
+| Run current Line             |       Ctrl + ↵       |        Cmd + ↵        |
+| Undo                         |       Ctrl + Z       |        Cmd + Z        |
+| Redo                         |   Ctrl + Shift + Z   |    Cmd + Shift + Z    |
+| Copy                         |       Ctrl + C       |        Cmd + C        |
+| Paste                        |       Ctrl + Y       |        Cmd + Y        |
+| Cut                          |       Ctrl + X       |        Cmd + X        |
+| Move Lines Up/Down           |     Alt+Up/Down      |    Option+Up/Down     |
+| Delete Line                  |       Ctrl + D       |        Cmd + D        |
+| Move to Line start           |     Ctrl + Left      |      Cmd + Left       |
+| Move to Line end             |     Ctrl + Right     |      Cmd + Right      |
+| Select to Line Start         | Ctrl + Shift + Left  | Cmd + + Shift + Left  |
+| Select to Line End           | Ctrl + Shift + Right | Cmd + + Shift + Right |
+| Insert Pipe Operator( %\>% ) |   Ctrl + Shift + M   |    Cmd + Shift + M    |
+| Find                         |       Ctrl + F       |        Cmd + F        |
+
+## Change a value in a specific column according to the value in a specific column
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(DT)
+datatable(mtcars, options = list(pageLength = 3))
+```
+
+Try to assign ***NA*** to **disp** if **cyl** is equal to **4**. "Mutate" or "If" is overkill in this case.
+
+```{r message=FALSE, warning=FALSE}
+mtcars$disp[mtcars$cyl == 4] <- "NA"
+datatable(mtcars, options = list(pageLength = 3))
+```
+
+
+
 
