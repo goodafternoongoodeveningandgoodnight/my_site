@@ -23,10 +23,10 @@ library(tidyr)
 library(DT)
 
 data(package = "tidyr") # Buitl in dataset in the package Tidyer
-datatable(us_rent_income, options = list(pageLength = 5))
+datatable(billboard, options = list(pageLength = 5))
 ```
 
-## Separate_a character column into multiple columns
+## Separate a character column into multiple columns
 df contains strings with both a name and sort of drinks. We will tidy this dataset so that each variable gets its own column.
 ```{r message=FALSE, warning=FALSE}
 library(tidyr)
@@ -34,7 +34,7 @@ df <- data.frame(x = c("Joy:Milk", "Monica:Coffee", "Chandler:Tea", "Rachel:Juic
 df %>% separate(x, into = c("name","drink"), sep = ":", convert = TRUE) 
 ```
 
-## Unite_Multiple columns into one by pasting strings together
+## Unite multiple columns into one by pasting strings together
 ```{r}
 df <- data.frame(name = c("Joy", "Monica", NA), drink = c("Milk", "Coffee", NA))
 df
@@ -52,4 +52,42 @@ df %>%
   separate_rows(name, drink, sep = "/", convert = TRUE)
 ```
 
-## 
+## Fill in missing values with previous or next value
+```{r message=FALSE, warning=FALSE}
+sales <- tibble::tribble(
+  ~quarter, ~year, ~sales,
+  "Q1",    2000,    66013,
+  "Q2",      NA,    69182,
+  "Q3",      NA,    53175,
+  "Q4",      NA,    21001,
+  "Q1",    2001,    46036,
+  "Q2",      NA,    58842,
+  "Q3",      NA,    44568,
+  "Q4",      NA,    50197,
+  "Q1",    2002,    39113,
+  "Q2",      NA,    41668,
+  "Q3",      NA,    30144,
+  "Q4",      NA,    52897,
+  "Q1",    2004,    32129,
+  "Q2",      NA,    67686,
+  "Q3",      NA,    31768,
+  "Q4",      NA,    49094
+)
+# `fill()` defaults to replacing missing data from top to bottom
+sales_df <- sales %>% fill(year, .direction = "down")
+sales_df
+```
+Create a line plot with sales per quarter colored by year
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+sales_df %>% 
+  ggplot(aes(x = quarter , y = sales, color = year, group = year)) +
+  geom_line() +
+  theme_classic()
+```
+
+## Pivot data from wide to long
+```{r}
+```
+
+
