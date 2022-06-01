@@ -6,15 +6,24 @@
     <description>Recent content in Posts on Minimal, Meaningful, Mindful Sikai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Stringr in R</title>
+      <title>Longitudinal Studies: Analysis of Rates and Survival Times</title>
+      <link>/post/2022/05/29/longitudinal-studies-analysis-of-rates-and-survival-times/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/29/longitudinal-studies-analysis-of-rates-and-survival-times/</guid>
+      <description>I was asked about cox regression in an interview the other day. I have certainly learnt but was still stucked at that time. So, I decided to re-read the book called Essential Medical Statistics written by Betty R. Kirkwood and Jonathan A.C. Sterne to strengthen my knowledge of longitudinal studies.</description>
+    </item>
+    
+    <item>
+      <title>Tidyverse Stringr Package</title>
       <link>/post/2022/05/27/stringr-in-r/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/05/27/stringr-in-r/</guid>
-      <description>Split up a string into pieces fruits &amp;lt;- c( &amp;ldquo;apples and oranges and pears and bananas&amp;rdquo;, &amp;ldquo;pineapples and mangos and guavas&amp;rdquo; )
-unlist(strsplit(fruits, &amp;quot; and &amp;ldquo;))</description>
+      <description>The stringr package encompasses a series of verbs designed to make data manipulation work with strings as easy as possible, particular useful to wrangle the survey data (including string values).
+Essential packages library(stringr)  Measure a string length fruits &amp;lt;- c( &amp;quot;apples and oranges and pears and bananas&amp;quot;, &amp;quot;pineapples and mangos and guavas&amp;quot;) str_length(fruits) # Results include the whitespace  ## [1] 40 32  Combine multiple strings into a string str_c(fruits, collapse = &amp;quot; and &amp;quot;)  ## [1] &amp;quot;apples and oranges and pears and bananas and pineapples and mangos and guavas&amp;quot;  Extract and replace substrings from a character vector If a vector contains multiple strings, it will return the subset of each string</description>
     </item>
     
     <item>

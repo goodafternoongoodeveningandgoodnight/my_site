@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stringr in R | Minimal, Meaningful, Mindful Sikai</title>
+    <title>Tidyverse Stringr Package | Minimal, Meaningful, Mindful Sikai</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     
@@ -28,18 +28,101 @@
     </nav>
 
 <div class="article-meta">
-<h1><span class="title">Stringr in R</span></h1>
+<h1><span class="title">Tidyverse Stringr Package</span></h1>
 <h2 class="author">Sikai Huang</h2>
 <h2 class="date">2022/05/27</h2>
 </div>
 
 <main>
+<p>The <a href="https://stringr.tidyverse.org/index.html"><strong>stringr</strong></a> package encompasses a series of verbs designed to make data manipulation work with strings as easy as possible, particular useful to wrangle the <strong>survey data</strong> (including string values).</p>
+<h2 id="essential-packages">Essential packages</h2>
+<pre><code class="language-r">library(stringr)
+</code></pre>
+<h2 id="measure-a-string-length">Measure a string length</h2>
+<pre><code class="language-r">fruits &lt;- c(
+  &quot;apples and oranges and pears and bananas&quot;,
+  &quot;pineapples and mangos and guavas&quot;)
+str_length(fruits) # Results include the whitespace
+</code></pre>
+<pre><code>## [1] 40 32
+</code></pre>
+<h2 id="combine-multiple-strings-into-a-string">Combine multiple strings into a string</h2>
+<pre><code class="language-r">str_c(fruits, collapse = &quot; and &quot;)
+</code></pre>
+<pre><code>## [1] &quot;apples and oranges and pears and bananas and pineapples and mangos and guavas&quot;
+</code></pre>
+<h2 id="extract-and-replace-substrings-from-a-character-vector">Extract and replace substrings from a character vector</h2>
+<p>If a vector contains multiple strings, it will return the subset of each string</p>
+<pre><code class="language-r">str_sub(fruits, 1, 6) 
+</code></pre>
+<pre><code>## [1] &quot;apples&quot; &quot;pineap&quot;
+</code></pre>
+<h2 id="keep-strings-matching-a-pattern-or-find-positions"><strong>Keep strings matching a pattern, or find positions</strong></h2>
+<pre><code class="language-r">str_subset(fruits, &quot;mangos&quot;)
+</code></pre>
+<pre><code>## [1] &quot;pineapples and mangos and guavas&quot;
+</code></pre>
+<h2 id="detect-the-presence-or-absence-of-a-pattern"><strong>Detect the presence or absence of a pattern</strong></h2>
+<pre><code class="language-r">str_detect(fruits, &quot;pears&quot;)
+</code></pre>
+<pre><code>## [1]  TRUE FALSE
+</code></pre>
+<pre><code class="language-r">str_detect(fruits, &quot;^apples&quot;) # &quot;^&quot; refers to the string that starts with pattern
+</code></pre>
+<pre><code>## [1]  TRUE FALSE
+</code></pre>
+<pre><code class="language-r">str_detect(fruits, &quot;guavas$&quot;) # &quot;$&quot; refers to the string that ends with pattern
+</code></pre>
+<pre><code>## [1] FALSE  TRUE
+</code></pre>
+<h2 id="counts-the-number-of-patterns">Counts the number of patterns</h2>
+<pre><code class="language-r">str_count(fruits, &quot;and&quot;)
+</code></pre>
+<pre><code>## [1] 3 2
+</code></pre>
+<h2 id="locate-the-position-of-patterns"><strong>Locate the position of patterns</strong></h2>
+<pre><code class="language-r">str_locate(fruits, &quot;banana&quot;)
+</code></pre>
+<pre><code>##      start end
+## [1,]    34  39
+## [2,]    NA  NA
+</code></pre>
+<h2 id="extract-matching-patterns-from-a-string"><strong>Extract matching patterns from a string</strong></h2>
+<pre><code class="language-r">str_extract(fruits, &quot;bananas&quot;)
+</code></pre>
+<pre><code>## [1] &quot;bananas&quot; NA
+</code></pre>
+<h2 id="replaces-the-matches-with-new-text">Replaces the matches with new text</h2>
+<pre><code class="language-r">str_replace(fruits, &quot;s&quot;, &quot;&quot;) # replace the first matched pattern
+</code></pre>
+<pre><code>## [1] &quot;apple and oranges and pears and bananas&quot;
+## [2] &quot;pineapple and mangos and guavas&quot;
+</code></pre>
+<pre><code class="language-r">str_replace_all(fruits, &quot;s&quot;, &quot;&quot;) # replace all matached components with new text in a string
+</code></pre>
+<pre><code>## [1] &quot;apple and orange and pear and banana&quot;
+## [2] &quot;pineapple and mango and guava&quot;
+</code></pre>
 <h2 id="split-up-a-string-into-pieces">Split up a string into pieces</h2>
-<p>fruits &lt;- c(
-&ldquo;apples and oranges and pears and bananas&rdquo;,
-&ldquo;pineapples and mangos and guavas&rdquo;
-)</p>
-<p>unlist(strsplit(fruits, &quot; and &ldquo;))</p>
+<pre><code class="language-r">fruits &lt;- c(
+  &quot;apples and oranges and pears and bananas&quot;,
+  &quot;pineapples and mangos and guavas&quot;)
+str_split(fruits, &quot; and &quot;) # return a list
+</code></pre>
+<pre><code>## [[1]]
+## [1] &quot;apples&quot;  &quot;oranges&quot; &quot;pears&quot;   &quot;bananas&quot;
+## 
+## [[2]]
+## [1] &quot;pineapples&quot; &quot;mangos&quot;     &quot;guavas&quot;
+</code></pre>
+<p>Using <strong>unlist()</strong> or <strong>unnest()</strong> to convert a list to a vector</p>
+<pre><code class="language-r">unlist(strsplit(fruits, &quot; and &quot;))
+</code></pre>
+<pre><code>## [1] &quot;apples&quot;     &quot;oranges&quot;    &quot;pears&quot;      &quot;bananas&quot;    &quot;pineapples&quot;
+## [6] &quot;mangos&quot;     &quot;guavas&quot;
+</code></pre>
+<h2 id="cheat-sheet">Cheat Sheet</h2>
+<p><a href="https://stringr.tidyverse.org/index.html"><img src="images/stringr.png" alt=""></a></p>
 
 </main>
 

@@ -8,13 +8,13 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Stringr in R</title>
+      <title>Tidyverse Stringr Package</title>
       <link>/post/2022/05/27/stringr-in-r/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/post/2022/05/27/stringr-in-r/</guid>
-      <description>Split up a string into pieces fruits &amp;lt;- c( &amp;ldquo;apples and oranges and pears and bananas&amp;rdquo;, &amp;ldquo;pineapples and mangos and guavas&amp;rdquo; )
-unlist(strsplit(fruits, &amp;quot; and &amp;ldquo;))</description>
+      <description>The stringr package encompasses a series of verbs designed to make data manipulation work with strings as easy as possible, particular useful to wrangle the survey data (including string values).
+Essential packages library(stringr)  Measure a string length fruits &amp;lt;- c( &amp;quot;apples and oranges and pears and bananas&amp;quot;, &amp;quot;pineapples and mangos and guavas&amp;quot;) str_length(fruits) # Results include the whitespace  ## [1] 40 32  Combine multiple strings into a string str_c(fruits, collapse = &amp;quot; and &amp;quot;)  ## [1] &amp;quot;apples and oranges and pears and bananas and pineapples and mangos and guavas&amp;quot;  Extract and replace substrings from a character vector If a vector contains multiple strings, it will return the subset of each string</description>
     </item>
     
     <item>

@@ -6,22 +6,22 @@
     <description>Recent content in Categories on Minimal, Meaningful, Mindful Sikai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Epidemiology</title>
+      <link>/categories/epidemiology/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/epidemiology/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>R</title>
       <link>/categories/r/</link>
       <pubDate>Fri, 27 May 2022 00:00:00 +0000</pubDate>
       
       <guid>/categories/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Epidemiology</title>
-      <link>/categories/epidemiology/</link>
-      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/epidemiology/</guid>
       <description></description>
     </item>
     

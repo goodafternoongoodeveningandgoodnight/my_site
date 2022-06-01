@@ -6,7 +6,16 @@
     <description>Recent content in Epidemiology on Minimal, Meaningful, Mindful Sikai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/epidemiology/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/epidemiology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Longitudinal Studies: Analysis of Rates and Survival Times</title>
+      <link>/post/2022/05/29/longitudinal-studies-analysis-of-rates-and-survival-times/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2022/05/29/longitudinal-studies-analysis-of-rates-and-survival-times/</guid>
+      <description>I was asked about cox regression in an interview the other day. I have certainly learnt but was still stucked at that time. So, I decided to re-read the book called Essential Medical Statistics written by Betty R. Kirkwood and Jonathan A.C. Sterne to strengthen my knowledge of longitudinal studies.</description>
+    </item>
+    
     <item>
       <title>Principles and Methods of Epidemiology</title>
       <link>/post/2022/05/17/principles-and-methods-of-epidemiology/</link>
