@@ -12,6 +12,7 @@ output:
     toc: yes
     toc_depth: 2
 ---
+---
 
 How popular **the dplyr package** is. Dplyr, one of the most fantastic packages in RStudio, able to carry out all data manipulation tasks! Here I listed the main verbs that are built in [dplyr](https://dplyr.tidyverse.org/).
 

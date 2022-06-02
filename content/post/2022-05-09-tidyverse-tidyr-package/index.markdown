@@ -7,10 +7,10 @@ categories:
   - R
 tags:
   - RStudio
-output: 
-  html_document:
-    toc: true # table of content true
-    toc_depth: 2  # upto three depths of headings (specified by #, ## and ###)
+  
+output:
+    toc: yes
+    toc_depth: 2
 ---
 
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
@@ -23,7 +23,7 @@ output:
 <link href="{{< blogdown/postref >}}index_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/crosstalk/js/crosstalk.min.js"></script>
 
-How to do with messy data at hand? What does tidy data looks like? ![TidyData](images/tidy_data.png) Tidy data includes three key points:
+How to process messy data at hand? What does tidy data looks like? ![TidyData](images/tidy_data.png) Tidy data includes three key points:
 
 -   each row includes each observation
 -   each column stands for each variable
