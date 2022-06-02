@@ -7,10 +7,10 @@ categories:
   - R
 tags:
   - RStudio
-  
 output:
+  html_document:
     toc: yes
-    toc_depth: 2
+    theme: united
 ---
 
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
@@ -434,9 +434,9 @@ head(full_seq(outer_dates, period = 1))
 
 ## Rectangle a nested list into a tidy tibble
 
-hoist(), unnest\_longer(), and unnest\_wider() provide tools for rectangling, collapsing deeply nested lists into regular columns.
+hoist(), unnest_longer(), and unnest_wider() provide tools for rectangling, collapsing deeply nested lists into regular columns.
 
-Named lists of **fixed length** = unnest\_wider(), unnamed lists of **varying length** = unnest\_longer().
+Named lists of **fixed length** = unnest_wider(), unnamed lists of **varying length** = unnest_longer().
 
 ``` r
 df <- tibble(

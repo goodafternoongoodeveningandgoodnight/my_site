@@ -52,6 +52,7 @@
 <li><a href="#grouping">Grouping</a></li>
 <li><a href="#visualizing-mediangdppercap-within-each-continent-within-each-year">Visualizing medianGdpPercap within each continent within each year</a></li>
 </ul></li>
+<li><a href="#subset-rows-using-their-positions">Subset rows using their positions</a></li>
 <li><a href="#data-visualisation">Data visualisation</a>
 <ul>
 <li><a href="#essential-package-1">Essential package</a></li>
@@ -62,10 +63,13 @@
 <li><a href="#histogram">Histogram</a></li>
 <li><a href="#box-plot">Box plot</a></li>
 <li><a href="#asthetics">Asthetics</a></li>
+<li><a href="#cheat-sheet">Cheat Sheet</a></li>
 </ul></li>
 </ul>
 </div>
 
+<hr />
+<p>How popular <strong>the dplyr package</strong> is. Dplyr, one of the most fantastic packages in RStudio, able to carry out all data manipulation tasks! Here I listed the main verbs that are built in <a href="https://dplyr.tidyverse.org/">dplyr</a>.</p>
 <div id="introduction-to-dplyr" class="section level1">
 <h1>Introduction to dplyr</h1>
 <div id="essential-package" class="section level2">
@@ -210,6 +214,17 @@ ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent))
 <p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 </div>
+<div id="subset-rows-using-their-positions" class="section level1">
+<h1>Subset rows using their positions</h1>
+<p>slice() lets you index rows by their (integer) locations. It allows you to select, remove, and duplicate rows.</p>
+<pre class="r"><code>mtcars %&gt;% slice_min(mpg, n = 5) # Get the top five best cars by mpg</code></pre>
+<pre><code>##                      mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Cadillac Fleetwood  10.4   8  472 205 2.93 5.250 17.98  0  0    3    4
+## Lincoln Continental 10.4   8  460 215 3.00 5.424 17.82  0  0    3    4
+## Camaro Z28          13.3   8  350 245 3.73 3.840 15.41  0  0    3    4
+## Duster 360          14.3   8  360 245 3.21 3.570 15.84  0  0    3    4
+## Chrysler Imperial   14.7   8  440 230 3.23 5.345 17.42  0  0    3    4</code></pre>
+</div>
 <div id="data-visualisation" class="section level1">
 <h1>Data visualisation</h1>
 <div id="essential-package-1" class="section level2">
@@ -226,14 +241,14 @@ gapminder_1952 &lt;- gapminder %&gt;%
 # Create a scatter plot with pop on the x-axis and lifeExp on the y-axis
 ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   geom_point()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>Some countries have <strong>much more</strong> population than others where we need to scale the data using <strong>scale_x_log10()</strong>.</p>
 <pre class="r"><code>gapminder_1952 &lt;- gapminder %&gt;%
   filter(year == 1952)
 ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   geom_point() +
   scale_x_log10()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 </div>
 <div id="faceting" class="section level2">
 <h2>Faceting</h2>
@@ -242,7 +257,7 @@ ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) +
   geom_point() +
   scale_x_log10() +
   facet_wrap(~ year) # &quot;~ year&quot; means by year</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 </div>
 <div id="line-plot" class="section level2">
 <h2>Line plot</h2>
@@ -254,7 +269,7 @@ by_year_continent &lt;- gapminder %&gt;%
 ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent)) +
   geom_line() +
   expand_limits(y = 0)</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 </div>
 <div id="bar-plot" class="section level2">
 <h2>Bar plot</h2>
@@ -266,7 +281,7 @@ by_continent &lt;- gapminder %&gt;%
 
 ggplot(by_continent, aes(x = continent, y = medianGdpPercap, color = continent)) +
   geom_col()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 <div id="histogram" class="section level2">
 <h2>Histogram</h2>
@@ -276,7 +291,7 @@ gapminder_1952 &lt;- gapminder %&gt;%
 ggplot(gapminder_1952, aes(x = pop))+
   geom_histogram()+
   scale_x_log10()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <div id="box-plot" class="section level2">
 <h2>Box plot</h2>
@@ -287,7 +302,7 @@ gapminder_1957 &lt;- gapminder %&gt;%
 ggplot(gapminder_1957, aes(x = continent, y = gdpPercap)) +
   geom_boxplot() +
   scale_y_log10()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 </div>
 <div id="asthetics" class="section level2">
 <h2>Asthetics</h2>
@@ -296,7 +311,7 @@ ggplot(gapminder_1957, aes(x = continent, y = gdpPercap)) +
 <pre class="r"><code>ggplot(gapminder_1952, aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) + 
   geom_point() + 
   scale_x_log10()</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 </div>
 <div id="title" class="section level3">
 <h3>Title</h3>
@@ -305,7 +320,7 @@ ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
   geom_boxplot() +
   scale_y_log10() +
   labs(title = &quot;Comparing GDP per capita across continents&quot;, x = &quot;where continent&quot;, y = &quot;how much GDP per capita&quot;) # Or plot + ggtitle(&quot;Comparing GDP per capita across continents&quot;) + xlab(&quot;where continent&quot;) + ylab(&quot;how much gdpPercap&quot;)</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 </div>
 <div id="legend-label-by-x-axis-variable" class="section level3">
 <h3>Legend label by x-axis variable</h3>
@@ -313,8 +328,12 @@ ggplot(gapminder_1952, aes(x = continent, y = gdpPercap)) +
   geom_boxplot() +
   scale_y_log10() +
   labs(title = &quot;Comparing GDP per capita across continents&quot;, x = &quot;where continent&quot;, y = &quot;how much GDP per capita&quot;, fill = &quot;Continent&quot;)</code></pre>
-<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="/post/2022/05/08/dplyr-package/index_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 </div>
+</div>
+<div id="cheat-sheet" class="section level2">
+<h2>Cheat Sheet</h2>
+<p><a href="https://dplyr.tidyverse.org/"><img src="images/download.png" /></a></p>
 </div>
 </div>
 

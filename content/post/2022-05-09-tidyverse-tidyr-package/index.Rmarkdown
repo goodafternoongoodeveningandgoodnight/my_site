@@ -7,10 +7,10 @@ categories:
   - R
 tags:
   - RStudio
-  
 output:
+  html_document:
     toc: yes
-    toc_depth: 2
+    theme: united
 ---
 
 How to process messy data at hand? What does tidy data looks like? ![TidyData](images/tidy_data.png) Tidy data includes three key points:
