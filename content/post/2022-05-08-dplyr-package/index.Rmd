@@ -108,6 +108,13 @@ ggplot(by_year_continent, aes(x = year, y = medianGdpPercap, color = continent))
   expand_limits(y = 0) # To make sure the plot's y-axis includes zero
 ```
 
+# Subset rows using their positions
+slice() lets you index rows by their (integer) locations. It allows you to select, remove, and duplicate rows.
+```{r}
+mtcars %>% slice_min(mpg, n = 5) # Get the top five best cars by mpg
+```
+
+
 # Data visualisation
 
 ## Essential package

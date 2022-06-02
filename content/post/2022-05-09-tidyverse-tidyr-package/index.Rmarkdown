@@ -1,5 +1,5 @@
 ---
-title: Tidyverse Tidyr Package (Updating)
+title: Tidyverse Tidyr Package
 author: Sikai Huang
 date: '2022-05-09'
 slug: tidyverse-tidyr-package
@@ -7,27 +7,86 @@ categories:
   - R
 tags:
   - RStudio
+output: 
+  html_document:
+    toc: true # table of content true
+    toc_depth: 2  # upto three depths of headings (specified by #, ## and ###)
 ---
 
-How to do with messy data at hand? What does tidy data looks like?
-![TidyData](images/tidy_data.png)
-Tidy data includes three key points:
-- each row includes each observation
-- each column stands for each variable
-- each cell contains each value
+How to do with messy data at hand? What does tidy data looks like? ![TidyData](images/tidy_data.png) Tidy data includes three key points:
 
+-   each row includes each observation
+-   each column stands for each variable
+-   each cell contains each value
 
-let's look at an example of messy data:
+let's look at an example of messy data: Although the following data satisfies three kep points we mentioned before, we could change our perspectives to better understand it.
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyr)
 library(DT)
 
-data(package = "tidyr") # Buitl in dataset in the package Tidyer
-datatable(billboard, options = list(pageLength = 5))
+data(package = "tidyr") # Built in dataset in the package Tidyer
+datatable(us_rent_income, options = list(pageLength = 5))
 ```
 
+------------------------------------------------------------------------
+
+# Pivot
+
+Among all definitions of pivot, I preferred that one given by [Merriam-Webster](https://www.merriam-webster.com/dictionary/pivot).
+
+> ***To adapt or improve by adjusting or modifying something (such as a product, service, or strategy)***
+
+The pivot here is an action of **improve** whatever you turn left or right. That's why we've got **data pivoting**. Data pivoting enables you to rearrange the columns and rows in a data so you can view it from different perspectives to get a better sense of it.
+
+## Pivot data from long to wide
+
+```{r}
+us_rent_income
+us_rent_income %>%
+  pivot_wider(
+    names_from = variable,
+    values_from = c(estimate, moe)
+  )
+```
+
+## Pivot data from wide to long
+
+```{r}
+head(relig_income)
+relig_income %>%
+  pivot_longer(!religion, names_to = "income", values_to = "count")
+```
+
+```{r}
+billboard %>%
+  pivot_longer(
+    cols = starts_with("wk"), # or wk1:wkN
+    names_to = "week",
+    names_prefix = "wk", # A regular expression used to remove matching text from the start of each variable name
+    names_transform = list(week = as.integer),  # convert a character variable called week to an integer
+    values_to = "rank",
+    values_drop_na = TRUE
+  )
+```
+
+## Uncount a data frame
+
+Uncount the data so that per x, each character gets a row and an ID.
+
+```{r}
+df <- tibble(star = c("Jason", "Murphy"), boxoffice = c(1, 2))
+df
+uncount(df, boxoffice)
+uncount(df, boxoffice, .id = "ID") # The ID should go in the id column
+```
+
+# Separate, Unite, and Fill
+
 ## Separate a character column into multiple columns
+
 df contains strings with both a name and sort of drinks. We will tidy this dataset so that each variable gets its own column.
+
 ```{r message=FALSE, warning=FALSE}
 library(tidyr)
 df <- data.frame(x = c("Joy:Milk", "Monica:Coffee", "Chandler:Tea", "Rachel:Juice", NA))
@@ -35,6 +94,7 @@ df %>% separate(x, into = c("name","drink"), sep = ":", convert = TRUE)
 ```
 
 ## Unite multiple columns into one by pasting strings together
+
 ```{r}
 df <- data.frame(name = c("Joy", "Monica", NA), drink = c("Milk", "Coffee", NA))
 df
@@ -43,6 +103,7 @@ df %>% unite("Love", name, drink, sep =" loves ", na.rm = TRUE, remove = FALSE) 
 ```
 
 ## Separate a collapsed column into multiple rows
+
 ```{r}
 df <- data.frame(
   name = c("Joy", "Monica/Chandler", "Rachel/Ross"),
@@ -53,6 +114,7 @@ df %>%
 ```
 
 ## Fill in missing values with previous or next value
+
 ```{r message=FALSE, warning=FALSE}
 sales <- tibble::tribble(
   ~quarter, ~year, ~sales,
@@ -77,7 +139,9 @@ sales <- tibble::tribble(
 sales_df <- sales %>% fill(year, .direction = "down")
 sales_df
 ```
+
 Create a line plot with sales per quarter colored by year
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 sales_df %>% 
@@ -86,8 +150,72 @@ sales_df %>%
   theme_classic()
 ```
 
-## Pivot data from wide to long
-```{r}
+## Create a tibble from all combinations of inputs
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+expand_grid(x = 1:3, y = 1:2)
+expand_grid(l1 = letters, l2 = LETTERS)
+expand_grid(x1 = matrix(1:4, nrow = 2), x2 = matrix(5:8, nrow = 2))
 ```
 
+## Complete a data frame with missing combinations of data
 
+```{r}
+df <- tibble(
+  group = c(1:2, 1, 2),
+  item_id = c(1:2, 2, 3),
+  item_name = c("a", "a", "b", "b"),
+  value1 = c(1, NA, 3, 4),
+  value2 = 4:7
+)
+df
+# Generate all possible combinations of `group`, `item_id`, and `item_name`
+# (whether or not they appear in the data)
+complete(df, group, item_id, item_name)
+# # Cross all possible `group` values with the unique pairs of
+# `(item_id, item_name)` that already exist in the data
+complete(df, group, nesting(item_id, item_name))
+```
+
+## Create the full sequence of values in a vector
+
+```{r}
+outer_dates <- c(as.Date("1980-01-01"), as.Date("1980-12-31"))
+
+# Generate the dates for all days in 1980
+head(full_seq(outer_dates, period = 1))
+```
+
+# Rectangling data
+
+## Rectangle a nested list into a tidy tibble
+
+hoist(), unnest_longer(), and unnest_wider() provide tools for rectangling, collapsing deeply nested lists into regular columns.
+
+Named lists of **fixed length** = unnest_wider(), unnamed lists of **varying length** = unnest_longer().
+
+```{r}
+df <- tibble(
+  character = c("Toothless", "Dory"),
+  metadata = list(
+    list(
+      species = "dragon",
+      color = "black",
+      films = c(
+        "How to Train Your Dragon",
+        "How to Train Your Dragon 2",
+        "How to Train Your Dragon: The Hidden World"
+       )
+    ),
+    list(
+      species = "blue tang",
+      color = "blue",
+      films = c("Finding Nemo", "Finding Dory")
+    )
+  )
+)
+df
+
+# Turn all components of metadata into columns
+df %>% unnest_wider(metadata)
+```
