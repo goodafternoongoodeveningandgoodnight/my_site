@@ -1,5 +1,8 @@
 ---
-title: Tidyverse Tidyr Package
+title: Fundamental tidyr
+output: 
+  html_document:
+    code_folding: hide
 author: Sikai Huang
 date: '2022-05-09'
 slug: tidyverse-tidyr-package
@@ -7,10 +10,6 @@ categories:
   - R
 tags:
   - RStudio
-output:
-  html_document:
-    toc: yes
-    theme: united
 ---
 
 How to process messy data at hand? What does tidy data looks like? ![TidyData](images/tidy_data.png) Tidy data includes three key points:
@@ -19,8 +18,9 @@ How to process messy data at hand? What does tidy data looks like? ![TidyData](i
 -   each column stands for each variable
 -   each cell contains each value
 
-let's look at an example of messy data: Although the following data satisfies three kep points we mentioned before, we could change our perspectives to better understand it.
+let's look at an example of messy data: Although the following data satisfies three key points we mentioned before, we could change our perspectives to better understand it.
 
+<details><summary>us_rent_income</summary>
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyr)
 library(DT)
@@ -28,6 +28,7 @@ library(DT)
 data(package = "tidyr") # Built in dataset in the package Tidyer
 datatable(us_rent_income, options = list(pageLength = 5))
 ```
+</details>
 
 ------------------------------------------------------------------------
 
@@ -37,7 +38,7 @@ Among all definitions of pivot, I preferred that one given by [Merriam-Webster](
 
 > ***To adapt or improve by adjusting or modifying something (such as a product, service, or strategy)***
 
-The pivot here is an action of **improve** whatever you turn left or right. That's why we've got **data pivoting**. Data pivoting enables you to rearrange the columns and rows in a data so you can view it from different perspectives to get a better sense of it.
+The pivot here is an action of **improve** whatever you turn left or right. That's why we've got **data pivoting**. Data pivoting enables you to rearrange the columns and rows in a data so you can review it from different perspectives for better understanding.
 
 ## Pivot data from long to wide
 
