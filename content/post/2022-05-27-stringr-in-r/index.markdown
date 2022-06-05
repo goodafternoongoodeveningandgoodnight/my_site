@@ -1,5 +1,5 @@
 ---
-title: Tidyverse Stringr Package
+title: Fundamental stringr
 author: Sikai Huang
 date: '2022-05-27'
 slug: stringr-in-r
